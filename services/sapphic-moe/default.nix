@@ -17,7 +17,7 @@
   };
 
   virtualisation.oci-containers.containers.sapphic-moe = {
-    image = "ghcr.io/SapphoSys/sapphic-moe:latest";
+    image = "ghcr.io/sapphosys/sapphic-moe:latest";
     pull = "always";
 
     login = {

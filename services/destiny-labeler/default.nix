@@ -15,7 +15,7 @@
   };
 
   virtualisation.oci-containers.containers."destiny-labeler" = {
-    image = "ghcr.io/SapphoSys/destiny-labeler:main";
+    image = "ghcr.io/sapphosys/destiny-labeler:main";
     pull = "always";
     autoRemoveOnStop = false;
     ports = [ "4002:4002" ];
