@@ -114,6 +114,12 @@
         };
 
         hosts = {
+          aperture = {
+            arch = "x86_64";
+            class = "nixos";
+            tags = [ "server" ];
+          };
+
           caulfield = {
             arch = "x86_64";
             class = "nixos";
