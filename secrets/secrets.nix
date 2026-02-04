@@ -28,5 +28,6 @@ in
   "outline/smtp-password.age".publicKeys = keys;
   "outline/utils-secret.age".publicKeys = keys;
   "pocket-id.age".publicKeys = keys;
+  "pocket-id-encryption-key.age".publicKeys = keys;
   "sapphic-moe.age".publicKeys = keys;
 }

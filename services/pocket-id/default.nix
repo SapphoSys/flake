@@ -1,11 +1,20 @@
 { config, ... }:
 
 {
-  age.secrets.pocket-id = {
-    file = ../../secrets/pocket-id.age;
-    mode = "600";
-    owner = "pocket-id";
-    group = "pocket-id";
+  age.secrets = {
+    pocket-id = {
+      file = ../../secrets/pocket-id.age;
+      mode = "600";
+      owner = "pocket-id";
+      group = "pocket-id";
+    };
+
+    pocket-id-encryption-key = {
+      file = ../../secrets/pocket-id-encryption-key.age;
+      mode = "600";
+      owner = "pocket-id";
+      group = "pocket-id";
+    };
   };
 
   services.pocket-id = {
@@ -14,6 +23,7 @@
 
     settings = {
       APP_URL = "https://id.sappho.systems";
+      ENCRYPTION_KEY_FILE = config.age.secrets."pocket-id-encryption-key".path;
       TRUST_PROXY = true;
     };
   };
