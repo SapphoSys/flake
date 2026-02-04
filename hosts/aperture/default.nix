@@ -7,7 +7,7 @@
   settings = {
     bootloader.grub = {
       enable = true;
-      device = "/dev/vda";
+      device = "/dev/sda";
     };
 
     profiles = {
