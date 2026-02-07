@@ -11,6 +11,7 @@
       headless.enable = lib.mkEnableOption "Headless configuration";
       laptop.enable = lib.mkEnableOption "Laptop configuration";
       server.enable = lib.mkEnableOption "Server configuration";
+      steamdeck.enable = lib.mkEnableOption "Steam Deck configuration";
     };
   };
 }

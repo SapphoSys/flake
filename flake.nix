@@ -10,6 +10,11 @@
     easy-hosts.url = "github:tgirlcloud/easy-hosts";
 
     # Systems
+    jovian = {
+      url = "github:Jovian-Experiments/Jovian-NixOS";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nix-darwin = {
       url = "github:nix-darwin/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -80,7 +85,12 @@
   };
 
   outputs =
-    inputs@{ flake-parts, ... }:
+    inputs@{
+      self,
+      nixpkgs,
+      flake-parts,
+      ...
+    }:
     flake-parts.lib.mkFlake { inherit inputs; } {
       imports = [
         inputs.easy-hosts.flakeModule
@@ -136,6 +146,12 @@
             arch = "aarch64";
             class = "darwin";
             tags = [ "laptop" ];
+          };
+
+          serenity = {
+            arch = "x86_64";
+            class = "nixos";
+            tags = [ "handheld" ];
           };
 
           solstice = {
