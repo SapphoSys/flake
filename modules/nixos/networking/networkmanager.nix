@@ -1,4 +1,11 @@
 {
+  # Enable systemd-resolved for proper DNS
+  services.resolved = {
+    enable = true;
+    dnssec = "allow-downgrade";
+    fallbackDns = [ "8.8.8.8" "1.1.1.1" ];
+  };
+
   networking.networkmanager = {
     enable = true;
     dns = "systemd-resolved";
