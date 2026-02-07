@@ -16,7 +16,7 @@
     };
 
     hardware = {
-      audio.enable = true;
+      audio.enable = false;
     };
 
     profiles = {
