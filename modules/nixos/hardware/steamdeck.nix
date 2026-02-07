@@ -20,6 +20,8 @@
         autoUpdate = false;
         # Enable vendor Mesa drivers for best performance
         enableVendorDrivers = true;
+        # Explicitly enable Steam Deck audio support
+        enableSoundSupport = true;
       };
 
       # Enable and configure Steam Deck UI (Gaming Mode)
