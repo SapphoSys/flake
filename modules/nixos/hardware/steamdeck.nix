@@ -13,7 +13,7 @@
 
   config = lib.mkIf config.settings.profiles.steamdeck.enable {
     # Use stable LTS kernel - linuxPackages_latest has audio regressions
-    boot.kernelPackages = lib.mkDefault pkgs.linuxPackages;
+    boot.kernelPackages = lib.mkForce pkgs.linuxPackages;
 
     # Jovian-NixOS Steam Deck hardware support
     jovian = {
