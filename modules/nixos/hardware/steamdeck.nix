@@ -2,6 +2,7 @@
   lib,
   config,
   inputs,
+  pkgs,
   ...
 }:
 
@@ -11,6 +12,9 @@
   ];
 
   config = lib.mkIf config.settings.profiles.steamdeck.enable {
+    # Use stable LTS kernel - linuxPackages_latest has audio regressions
+    boot.kernelPackages = lib.mkDefault pkgs.linuxPackages;
+
     # Jovian-NixOS Steam Deck hardware support
     jovian = {
       # Enable Steam Deck hardware support
@@ -38,6 +42,9 @@
       # Enable Decky Loader (plugin system for Steam Deck)
       decky-loader.enable = true;
     };
+
+    # Ensure no conflicting audio configuration
+    services.pulseaudio.enable = lib.mkForce false;
 
     # Additional Steam Deck-specific system configuration can go here
     # For example:
