@@ -17,7 +17,7 @@
       # You'll need to run: ssh-keygen -f /root/.ssh/remotebuild
       # on the local machine (Steam Deck) and copy remotebuild.pub here
       openssh.authorizedKeys.keys = [
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKMLdxEmVv6BW/TCDxlTyMqHv/TzU9E3LR9Yu5QfL3aY root@serenity"
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBmIptmj4kmWQRocqCX+knlCf7biqFZh+rWnPQzieRnh root@serenity"
       ];
     };
 
