@@ -46,6 +46,11 @@
     # Ensure no conflicting audio configuration
     services.pulseaudio.enable = lib.mkForce false;
 
+    # Required for Decky Loader.
+    systemd.user.tmpfiles.rules = lib.mkIf config.jovian.decky-loader.enable [
+      "f /home/${config.jovian.steam.user}/.local/share/Steam/.cef-enable-remote-debugging 0644 ${config.jovian.steam.user} users -"
+    ];
+
     # Additional Steam Deck-specific system configuration can go here
     # For example:
     # - Power management optimizations
