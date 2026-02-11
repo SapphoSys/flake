@@ -24,6 +24,8 @@
       steamdeck.enable = true;
     };
 
+    settings.hardware.trimmedJovianKernel.enable = true;
+
     # Offload builds to the VPS
     distributedBuilds = {
       enable = true;
