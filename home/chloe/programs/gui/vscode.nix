@@ -8,6 +8,8 @@
     profiles.default.userSettings = {
       catppuccin.accentColor = "pink";
 
+      chat.tools.terminal.outputLocation = "chat";
+
       diffEditor = {
         experimental.showMoves = true;
         ignoreTrimWhitespace = false;
@@ -83,7 +85,7 @@
       #   titleBarStyle = "custom";
       # };
 
-      workBench = {
+      workbench = {
         colorTheme = "Catppuccin Mocha";
         customTitleBarVisibility = "auto";
         editor.empty.hint = "hidden";
