@@ -25,6 +25,8 @@
       "bruno"
       "crossover"
       "discord"
+      "figma"
+      "iina"
       "maccy"
       "microsoft-edge"
       "microsoft-teams"
@@ -33,14 +35,11 @@
       "prismlauncher"
       "osu"
       "signal"
+      "slack"
       "steam"
       "tailscale-app"
+      "telegram"
+      "whatsapp"
     ];
-
-    # Mac App Store apps (requires mas-cli)
-    masApps = {
-      "WhatsApp" = 310633997;
-      "Telegram" = 747648890;
-    };
   };
 }
