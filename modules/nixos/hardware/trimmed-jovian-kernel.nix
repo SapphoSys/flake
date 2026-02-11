@@ -10,11 +10,7 @@
     nixpkgs.overlays = [
       (final: super: {
         linux_jovian = super.linux_jovian.overrideAttrs (old: {
-          configfile =
-            if builtins.pathExists ./trimmed-jovian-kernel.config then
-              ./trimmed-jovian-kernel.config
-            else
-              old.configfile;
+          configfile = ./trimmed-jovian-kernel.config;
         });
       })
     ];
