@@ -17,14 +17,13 @@
 
     hardware = {
       audio.enable = false;
+      trimmedJovianKernel.enable = true;
     };
 
     profiles = {
       graphical.enable = true;
       steamdeck.enable = true;
     };
-
-    settings.hardware.trimmedJovianKernel.enable = true;
 
     # Offload builds to the VPS
     distributedBuilds = {
