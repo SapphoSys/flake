@@ -3,7 +3,10 @@
   services.resolved = {
     enable = true;
     dnssec = "allow-downgrade";
-    fallbackDns = [ "8.8.8.8" "1.1.1.1" ];
+    fallbackDns = [
+      "8.8.8.8"
+      "1.1.1.1"
+    ];
   };
 
   networking.networkmanager = {
