@@ -6,10 +6,9 @@
   };
 
   config = lib.mkIf config.settings.hardware.trimmedJovianKernel.enable {
-    # Override the Jovian kernel to use a minimal config
     nixpkgs.overlays = [
       (final: super: {
-        linux_jovian = super.linux_jovian.overrideAttrs (old: {
+        linux_jovian = super.linux_jovian.overrideAttrs (_: {
           configfile = ./trimmed-jovian-kernel.config;
         });
       })
