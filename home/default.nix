@@ -19,7 +19,7 @@
       (
         { osConfig, ... }:
 
-        # reload system units when changing configs (only on Linux systems with systemd)
+        # reload system units when changing configs
         {
           systemd.user.startServices = lib.mkIf (
             osConfig.services.systemd-tmpfiles.enable or false || osConfig.wsl.enable or false
