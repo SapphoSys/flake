@@ -98,6 +98,9 @@
       # Allow remote builders to use substitutes (binary caches)
       # This prevents unnecessary rebuilds on the remote machine
       builders-use-substitutes = true;
+
+      # Increase download buffer for faster transfers from remote builders
+      download-buffer-size = 256 * 1024 * 1024; # 256 MiB
     };
 
     # Extra Nix daemon options
