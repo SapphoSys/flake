@@ -47,6 +47,12 @@
 
     # Disable WiFi power management to try to fix issues with 5GHz networks.
     networking.networkmanager.wifi.powersave = false;
+    
+    # Disable WiFi power management at the driver level (wpa_supplicant/iwlwifi)
+    boot.extraModprobeConfig = ''
+      options iwlwifi power_save=0
+      options iwlmvm power_scheme=1
+    '';
 
     # Required for Decky Loader.
     systemd.user.tmpfiles.rules = lib.mkIf config.jovian.decky-loader.enable [
