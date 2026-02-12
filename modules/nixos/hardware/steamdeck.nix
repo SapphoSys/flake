@@ -45,6 +45,9 @@
     # Ensure no conflicting audio configuration
     services.pulseaudio.enable = lib.mkForce false;
 
+    # Disable WiFi power management to try to fix issues with 5GHz networks.
+    networking.networkmanager.wifi.powersave = false;
+
     # Required for Decky Loader.
     systemd.user.tmpfiles.rules = lib.mkIf config.jovian.decky-loader.enable [
       "f /home/${config.jovian.steam.user}/.local/share/Steam/.cef-enable-remote-debugging 0644 ${config.jovian.steam.user} users -"
