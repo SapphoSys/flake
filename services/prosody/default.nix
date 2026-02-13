@@ -63,11 +63,9 @@
         "::1"
       ];
       http_ports = [ 5280 ];
-      https_interfaces = [
-        "127.0.0.1"
-        "::1"
-      ];
-      https_ports = [ 5281 ]; # Needed for host-meta on HTTPS
+
+      # External URL for client discovery
+      http_external_url = "https://xmpp.sappho.systems/";
 
       # Enable CORS for BOSH and WebSocket (XEP-0156)
       cross_domain_bosh = true;
@@ -121,10 +119,6 @@
         # Admin
         "admin_adhoc" # Admin commands via XMPP
       ];
-
-      # XEP-0156: Configure external URLs for BOSH/WebSocket (Caddy serves on :443)
-      http_altconnect_bosh_url = "https://xmpp.sappho.systems/http-bind";
-      http_altconnect_websocket_url = "wss://xmpp.sappho.systems/xmpp-websocket";
 
       # Disable prosodyctl startup warnings (systemd manages the service)
       prosodyctl_service_warnings = false;
