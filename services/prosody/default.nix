@@ -198,10 +198,10 @@
 
   # Additional firewall ports (openFirewall handles c2s/s2s automatically)
   # Direct TLS ports (5223, 5270) are opened automatically by the module
-  settings.firewall.allowedTCPPortRanges = [
-    {
-      from = 5000;
-      to = 5100;
-    } # SOCKS5 proxy port range (proxy65)
+  # Port 5000 is the default for proxy65 (SOCKS5 file transfer proxy)
+  settings.firewall.allowedTCPPorts = [
+    5000
+    5223
+    5270
   ];
 }
