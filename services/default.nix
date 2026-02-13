@@ -14,6 +14,7 @@
     ./ntfy
     ./outline
     ./pocket-id
+    ./prosody
     ./sapphic-moe
   ];
 }
