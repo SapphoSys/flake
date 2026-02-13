@@ -7,16 +7,21 @@
   # ACME certificate for XMPP domains
   # Prosody needs its own certificates for direct XMPP connections (c2s/s2s)
   # Caddy can only proxy HTTP traffic (BOSH/WebSocket)
-  security.acme.certs."xmpp.sappho.systems" = {
-    domain = "xmpp.sappho.systems";
-    extraDomainNames = [
-      "conference.xmpp.sappho.systems"
-      "upload.xmpp.sappho.systems"
-    ];
-    dnsProvider = "bunny";
-    dnsResolver = "9.9.9.9:53";
-    environmentFile = config.age.secrets.caddy.path; # Reuse Caddy's Bunny API key
-    group = "prosody";
+  security.acme = {
+    acceptTerms = true;
+    defaults.email = "chloe@sapphic.moe";
+
+    certs."xmpp.sappho.systems" = {
+      domain = "xmpp.sappho.systems";
+      extraDomainNames = [
+        "conference.xmpp.sappho.systems"
+        "upload.xmpp.sappho.systems"
+      ];
+      dnsProvider = "bunny";
+      dnsResolver = "9.9.9.9:53";
+      environmentFile = config.age.secrets.caddy.path; # Reuse Caddy's Bunny API key
+      group = "prosody";
+    };
   };
 
   services.prosody = {
@@ -204,4 +209,7 @@
     5223
     5270
   ];
+
+  # Allow Caddy to read the ACME certificate (both services need access)
+  users.users.caddy.extraGroups = [ "prosody" ];
 }
