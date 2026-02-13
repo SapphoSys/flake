@@ -43,7 +43,7 @@
   };
 
   # Allow turnserver user to read ACME certificates
-  users.users.turnserver.extraGroups = [ "acme" ];
+  users.users.turnserver.extraGroups = [ "prosody" ];
 
   # Firewall configuration
   networking.firewall = {
