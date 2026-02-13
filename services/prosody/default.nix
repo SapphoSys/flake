@@ -63,7 +63,10 @@
         "::1"
       ];
       http_ports = [ 5280 ];
-      https_interfaces = [ ];
+      https_interfaces = [
+        "127.0.0.1"
+        "::1"
+      ];
       https_ports = [ 5281 ]; # Needed for host-meta on HTTPS
 
       # Enable CORS for BOSH and WebSocket (XEP-0156)
