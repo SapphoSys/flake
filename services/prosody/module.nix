@@ -898,4 +898,6 @@ in
       gid = config.ids.gids.prosody;
     };
   };
+
+  meta.doc = ./prosody.md;
 }
