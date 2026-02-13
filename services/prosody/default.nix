@@ -73,9 +73,19 @@
 
       # Enable Direct TLS (XEP-0368) on alternate ports
       # Provides encrypted connections without STARTTLS
-      legacy_ssl_ports = [ 5223 ]; # Required for XEP-0368 compliance
       c2s_direct_tls_ports = [ 5223 ];
       s2s_direct_tls_ports = [ 5270 ];
+      
+      # SSL configuration for Direct TLS
+      c2s_direct_tls_ssl = {
+        certificate = "/var/lib/acme/xmpp.sappho.systems/fullchain.pem";
+        key = "/var/lib/acme/xmpp.sappho.systems/key.pem";
+      };
+      
+      s2s_direct_tls_ssl = {
+        certificate = "/var/lib/acme/xmpp.sappho.systems/fullchain.pem";
+        key = "/var/lib/acme/xmpp.sappho.systems/key.pem";
+      };
 
       # Module configuration
       modules_enabled = [
