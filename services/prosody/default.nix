@@ -193,6 +193,9 @@
         http_file_share_daily_quota = 1024 * 1024 * 1024; # 1 GB per user/day
         http_file_share_global_quota = 1024 * 1024 * 2048; # 2 GB total
         http_file_share_access = [ "xmpp.sappho.systems" ]; # Domains that can use upload
+        
+        # External URL for file uploads (Caddy serves on port 443)
+        http_external_url = "https://upload.xmpp.sappho.systems/";
       };
     };
   };
