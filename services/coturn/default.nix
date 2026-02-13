@@ -4,6 +4,11 @@
   # Coturn TURN/STUN server for Prosody XMPP voice/video calling
   # Enables NAT traversal for WebRTC calls through the XMPP server
 
+  age.secrets.coturn = {
+    file = ../../secrets/coturn.age;
+    mode = "600";
+  };
+
   services.coturn = {
     enable = true;
 
