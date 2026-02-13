@@ -44,7 +44,7 @@
     # Global settings
     settings = {
       # Admin accounts
-      admins = [ "accounts+xmppadmin@sapphic.moe" ];
+      admins = [ "accounts+xmppadmin@xmpp.sappho.systems" ];
 
       # Authentication
       authentication = "internal_hashed";
