@@ -55,7 +55,7 @@
       # Encryption requirements
       c2s_require_encryption = true;
       s2s_require_encryption = true;
-      s2s_secure_auth = true;
+      s2s_secure_auth = false; # Allow dialback fallback for federation
 
       # HTTP configuration - Prosody listens locally, Caddy proxies
       http_interfaces = [
@@ -75,13 +75,13 @@
       # Provides encrypted connections without STARTTLS
       c2s_direct_tls_ports = [ 5223 ];
       s2s_direct_tls_ports = [ 5270 ];
-      
+
       # SSL configuration for Direct TLS
       c2s_direct_tls_ssl = {
         certificate = "/var/lib/acme/xmpp.sappho.systems/fullchain.pem";
         key = "/var/lib/acme/xmpp.sappho.systems/key.pem";
       };
-      
+
       s2s_direct_tls_ssl = {
         certificate = "/var/lib/acme/xmpp.sappho.systems/fullchain.pem";
         key = "/var/lib/acme/xmpp.sappho.systems/key.pem";
