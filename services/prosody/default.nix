@@ -218,7 +218,7 @@
 
       # XEP-0156: Alternative connection methods discovery (with CORS)
       handle /.well-known/host-meta {
-        reverse_proxy https://127.0.0.1:5281
+        reverse_proxy http://127.0.0.1:5280
         header {
           Content-Type "application/xrd+xml"
           Access-Control-Allow-Origin "*"
@@ -226,7 +226,7 @@
       }
 
       handle /.well-known/host-meta.json {
-        reverse_proxy https://127.0.0.1:5281
+        reverse_proxy http://127.0.0.1:5280
         header {
           Content-Type "application/jrd+json"
           Access-Control-Allow-Origin "*"
@@ -252,12 +252,11 @@
   # Port 5223: c2s Direct TLS (XEP-0368)
   # Port 5270: s2s Direct TLS
   # Port 5000: proxy65 (SOCKS5 file transfer proxy)
-  # Port 5281: HTTPS for host-meta (XEP-0156)
+  # Ports 5280/5281: HTTP/HTTPS used only by Caddy locally (no firewall needed)
   settings.firewall.allowedTCPPorts = [
     5000
     5223
     5270
-    5281
   ];
 
   # Allow Caddy to read the ACME certificate (both services need access)
