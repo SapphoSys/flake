@@ -27,6 +27,9 @@
   services.prosody = {
     enable = true;
 
+    # file share shenanigans ig?
+    xmppComplianceSuite = false;
+
     # Package with community modules for better compliance
     package = pkgs.prosody.override {
       withCommunityModules = [
@@ -34,9 +37,6 @@
         "cloud_notify"
       ];
     };
-
-    # Enable XEP-0423 compliance suite
-    xmppComplianceSuite = true;
 
     # Automatically open firewall ports
     openFirewall = true;
@@ -159,13 +159,12 @@
 
     # Components: HTTP File Upload (XEP-0363)
     components."upload.xmpp.sappho.systems" = {
-      module = "http_upload";
+      module = "http_file_share";
       settings = {
-        http_upload_path = "${config.services.prosody.dataDir}/upload";
-        http_upload_file_size_limit = 52428800; # 50 MB
-        http_upload_expire_after = 2419200; # 4 weeks in seconds
-        http_upload_quota = 524288000; # 500 MB per user daily quota
-        http_external_url = "https://upload.xmpp.sappho.systems/";
+        http_file_share_size_limit = 100 * 1024 * 1024;
+        http_file_share_daily_quota = 1024 * 1024 * 1024;
+        http_file_share_global_quota = 1024 * 1024 * 2048;
+        http_file_share_access = "https://upload.xmpp.sappho.systems";
       };
     };
   };
