@@ -165,6 +165,7 @@
         http_upload_file_size_limit = 52428800; # 50 MB
         http_upload_expire_after = 2419200; # 4 weeks in seconds
         http_upload_quota = 524288000; # 500 MB per user daily quota
+        http_external_url = "https://upload.xmpp.sappho.systems/";
       };
     };
   };
