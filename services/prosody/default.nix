@@ -35,6 +35,8 @@
       withCommunityModules = [
         "smacks"
         "cloud_notify"
+        "http_altconnect" # XEP-0156: Auto-creates .well-known/host-meta
+        "pubsub_serverinfo" # XEP-0485: PubSub Server Information
       ];
     };
 
@@ -62,10 +64,15 @@
       ];
       http_ports = [ 5280 ];
       https_interfaces = [ ];
-      https_ports = [ ];
+      https_ports = [ 5281 ]; # Needed for host-meta on HTTPS
+
+      # Enable CORS for BOSH and WebSocket (XEP-0156)
+      cross_domain_bosh = true;
+      cross_domain_websocket = true;
 
       # Enable Direct TLS (XEP-0368) on alternate ports
       # Provides encrypted connections without STARTTLS
+      legacy_ssl_ports = [ 5223 ]; # Required for XEP-0368 compliance
       c2s_direct_tls_ports = [ 5223 ];
       s2s_direct_tls_ports = [ 5270 ];
 
@@ -81,12 +88,14 @@
         # Modern XMPP (XEP-0423 compliance)
         "carbons" # Multi-device sync
         "csi" # Client State Indication
+        "csi_simple" # Mobile battery optimization
         "cloud_notify" # Push notifications
         "pep" # Personal Eventing Protocol
         "private" # Private XML storage
         "blocklist" # User blocking
         "vcard_legacy" # vCard support
         "bookmarks" # Room bookmarks
+        "server_contact_info" # XEP-0157: Contact addresses
 
         # Message features
         "mam" # Message Archive Management
@@ -113,6 +122,25 @@
       # Disable prosodyctl startup warnings (systemd manages the service)
       prosodyctl_service_warnings = false;
 
+      # Certificate directory (prevents errors about /etc/prosody/certs)
+      certificates = "/var/lib/acme";
+
+      # Contact information (XEP-0157)
+      contact_info = {
+        abuse = [
+          "mailto:contact@sapphic.moe"
+          "xmpp:contact@xmpp.sappho.systems"
+        ];
+        admin = [
+          "mailto:contact@sapphic.moe"
+          "xmpp:chloe@xmpp.sappho.systems"
+        ];
+        support = [
+          "mailto:contact@sapphic.moe"
+          "xmpp:chloe@xmpp.sappho.systems"
+        ];
+      };
+
       # Limits for small server
       limits = {
         c2s = {
@@ -138,7 +166,6 @@
       settings = {
         modules_enabled = [
           "muc_mam" # Message Archive Management for MUC
-          "vcard_muc" # vCard support for MUC
         ];
         name = "Sappho.Systems Chatrooms";
         restrict_room_creation = "local"; # Only local users can create rooms
@@ -161,10 +188,10 @@
     components."upload.xmpp.sappho.systems" = {
       module = "http_file_share";
       settings = {
-        http_file_share_size_limit = 100 * 1024 * 1024;
-        http_file_share_daily_quota = 1024 * 1024 * 1024;
-        http_file_share_global_quota = 1024 * 1024 * 2048;
-        http_file_share_access = "https://upload.xmpp.sappho.systems";
+        http_file_share_size_limit = 100 * 1024 * 1024; # 100 MB
+        http_file_share_daily_quota = 1024 * 1024 * 1024; # 1 GB per user/day
+        http_file_share_global_quota = 1024 * 1024 * 2048; # 2 GB total
+        http_file_share_access = [ "xmpp.sappho.systems" ]; # Domains that can use upload
       };
     };
   };
@@ -186,6 +213,23 @@
         reverse_proxy http://127.0.0.1:5280
       }
 
+      # XEP-0156: Alternative connection methods discovery (with CORS)
+      handle /.well-known/host-meta {
+        reverse_proxy https://127.0.0.1:5281
+        header {
+          Content-Type "application/xrd+xml"
+          Access-Control-Allow-Origin "*"
+        }
+      }
+
+      handle /.well-known/host-meta.json {
+        reverse_proxy https://127.0.0.1:5281
+        header {
+          Content-Type "application/jrd+json"
+          Access-Control-Allow-Origin "*"
+        }
+      }
+
       # Respond to other requests
       respond 404
     '';
@@ -202,12 +246,15 @@
   };
 
   # Additional firewall ports (openFirewall handles c2s/s2s automatically)
-  # Direct TLS ports (5223, 5270) are opened automatically by the module
-  # Port 5000 is the default for proxy65 (SOCKS5 file transfer proxy)
+  # Port 5223: c2s Direct TLS (XEP-0368)
+  # Port 5270: s2s Direct TLS
+  # Port 5000: proxy65 (SOCKS5 file transfer proxy)
+  # Port 5281: HTTPS for host-meta (XEP-0156)
   settings.firewall.allowedTCPPorts = [
     5000
     5223
     5270
+    5281
   ];
 
   # Allow Caddy to read the ACME certificate (both services need access)
