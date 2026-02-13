@@ -122,6 +122,10 @@
         "admin_adhoc" # Admin commands via XMPP
       ];
 
+      # XEP-0156: Configure external URLs for BOSH/WebSocket (Caddy serves on :443)
+      http_altconnect_bosh_url = "https://xmpp.sappho.systems/http-bind";
+      http_altconnect_websocket_url = "wss://xmpp.sappho.systems/xmpp-websocket";
+
       # Disable prosodyctl startup warnings (systemd manages the service)
       prosodyctl_service_warnings = false;
 
