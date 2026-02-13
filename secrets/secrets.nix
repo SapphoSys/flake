@@ -13,6 +13,7 @@ in
   "abuseipdb.age".publicKeys = keys;
   "bluesky-pds.age".publicKeys = keys;
   "caddy.age".publicKeys = keys;
+  "coturn.age".publicKeys = keys;
   "destiny-labeler.age".publicKeys = keys;
   "ghcr-io-token.age".publicKeys = keys;
   "glance.age".publicKeys = keys;

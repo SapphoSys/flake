@@ -118,6 +118,10 @@
 
         # Admin
         "admin_adhoc" # Admin commands via XMPP
+
+        # TURN/STUN for voice/video calling
+        "turn_external" # External TURN server integration
+        "external_services" # Advertise external services (STUN/TURN)
       ];
 
       # Disable prosodyctl startup warnings (systemd manages the service)
@@ -151,7 +155,27 @@
           rate = "30kb/s";
         };
       };
+
+      # Coturn TURN/STUN server integration (for voice/video calls)
+      turn_external_host = "xmpp.sappho.systems";
+      turn_external_port = 3478;
     };
+
+    # Read Coturn shared secret from file
+    extraConfig = ''
+      local function read_file(path)
+        local file = io.open(path, "r")
+        if not file then
+          return nil, "Could not open file: " .. path
+        end
+        local content = file:read("*a")
+        file:close()
+        return content
+      end
+
+      turn_external_secret = read_file("${config.age.secrets.coturn.path}")
+      external_service_secret = read_file("${config.age.secrets.coturn.path}")
+    '';
 
     # Virtual host configuration
     virtualHosts."xmpp.sappho.systems" = {
@@ -193,7 +217,7 @@
         http_file_share_daily_quota = 1024 * 1024 * 1024; # 1 GB per user/day
         http_file_share_global_quota = 1024 * 1024 * 2048; # 2 GB total
         http_file_share_access = [ "xmpp.sappho.systems" ]; # Domains that can use upload
-        
+
         # External URL for file uploads (Caddy serves on port 443)
         http_external_url = "https://upload.xmpp.sappho.systems/";
       };
@@ -262,4 +286,7 @@
 
   # Allow Caddy to read the ACME certificate (both services need access)
   users.users.caddy.extraGroups = [ "prosody" ];
+
+  # Allow Prosody to read Coturn secret
+  users.users.${config.services.prosody.user}.extraGroups = [ "turnserver" ];
 }

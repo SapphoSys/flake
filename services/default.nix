@@ -3,6 +3,7 @@
     ./adguardhome
     ./bluesky-pds
     ./caddy
+    ./coturn
     ./destiny-labeler
     ./fabric-minecraft
     ./fail2ban
