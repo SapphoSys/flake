@@ -26,6 +26,7 @@ let
     # other GUI apps
     obs-studio
     _1password-gui
+    rustdesk
   ];
 in
 lib.optionals (
