@@ -12,7 +12,7 @@
   ];
 
   config = lib.mkIf config.settings.profiles.steamdeck.enable {
-    boot.kernelPackages = lib.mkForce pkgs.linuxPackages_jovian;
+    boot.kernelPackages = lib.mkDefault pkgs.linuxPackages_jovian;
 
     # Jovian-NixOS Steam Deck hardware support
     jovian = {
