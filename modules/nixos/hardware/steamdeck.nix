@@ -47,7 +47,7 @@
 
     # Disable WiFi power management to try to fix issues with 5GHz networks.
     networking.networkmanager.wifi.powersave = false;
-    
+
     # Disable WiFi power management at the driver level (wpa_supplicant/iwlwifi)
     boot.extraModprobeConfig = ''
       options iwlwifi power_save=0
