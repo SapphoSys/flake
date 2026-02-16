@@ -23,14 +23,20 @@
           # ===== GPU Drivers =====
           # Disable NVIDIA drivers (nouveau) - biggest time saver
           DRM_NOUVEAU = lib.mkForce no;
+          DRM_NOUVEAU_GSP_DEFAULT = lib.mkForce unset;
+          DRM_NOUVEAU_SVM = lib.mkForce unset;
 
           # Disable Intel graphics drivers - also big time savers
           DRM_I915 = lib.mkForce no;
+          DRM_I915_GVT = lib.mkForce unset;
+          DRM_I915_GVT_KVMGT = lib.mkForce unset;
           DRM_XE = lib.mkForce no;
 
           # ===== WiFi Drivers =====
           # Disable Atheros WiFi (Steam Deck uses MediaTek)
           WLAN_VENDOR_ATH = lib.mkForce no; # Big time saver!
+          ATH11K_TRACING = lib.mkForce unset;
+          ATH_REG_DYNAMIC_USER_REG_HINTS = lib.mkForce unset;
 
           # Disable other WiFi vendors
           WLAN_VENDOR_ADMTEK = lib.mkForce no;
@@ -41,6 +47,8 @@
           WLAN_VENDOR_MICROCHIP = lib.mkForce no;
           WLAN_VENDOR_PURELIFI = lib.mkForce no;
           WLAN_VENDOR_RALINK = lib.mkForce no;
+          RT2800USB_RT53XX = lib.mkForce unset;
+          RT2800USB_RT55XX = lib.mkForce unset;
           WLAN_VENDOR_RSI = lib.mkForce no;
           WLAN_VENDOR_SILABS = lib.mkForce no;
           WLAN_VENDOR_ST = lib.mkForce no;
@@ -51,7 +59,9 @@
           # ===== Other Unnecessary Hardware =====
           NFC = lib.mkForce no; # No NFC chip
           HAMRADIO = lib.mkForce no; # No amateur radio
+          AX25 = lib.mkForce unset; # Amateur radio protocol
           STAGING = lib.mkForce no; # Experimental/unmaintained drivers (huge!)
+          STAGING_MEDIA = lib.mkForce unset;
           ISDN = lib.mkForce no; # ISDN modems (obsolete)
 
           # Only disable ethernet vendors without complex dependencies
