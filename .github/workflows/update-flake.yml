@@ -3,7 +3,7 @@ name: Update Flake Inputs
 on:
   schedule:
     # Run daily at 00:00 UTC
-    - cron: '0 0 * * *'
+    - cron: "0 0 * * *"
   workflow_dispatch: # allows manual triggering
 
 jobs:
@@ -15,19 +15,27 @@ jobs:
       pull-requests: write
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Install Determinate Nix
         uses: DeterminateSystems/determinate-nix-action@v3
-      
+
       - name: Update flake.lock
+        id: update
         uses: DeterminateSystems/update-flake-lock@main
         with:
-            pr-title: "chore(flake): update inputs"
-            commit-msg: "chore(flake): update inputs"
-            pr-labels: |
-              dependencies
-              automated
-            git-author-name: github-actions[bot]
-            git-author-email: 41898282+github-actions[bot]@users.noreply.github.com
-            git-committer-name: github-actions[bot]
-            git-committer-email: 41898282+github-actions[bot]@users.noreply.github.com
+          pr-title: "chore(flake): update inputs"
+          commit-msg: "chore(flake): update inputs"
+          pr-labels: |
+            dependencies
+            automated
+          git-author-name: github-actions[bot]
+          git-author-email: 41898282+github-actions[bot]@users.noreply.github.com
+          git-committer-name: github-actions[bot]
+          git-committer-email: 41898282+github-actions[bot]@users.noreply.github.com
+
+      - name: Auto-merge PR
+        if: steps.update.outputs.pull-request-number != ''
+        run: gh pr merge --rebase --auto --delete-branch "$PR"
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR: ${{ steps.update.outputs.pull-request-url }}
