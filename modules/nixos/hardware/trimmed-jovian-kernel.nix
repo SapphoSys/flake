@@ -14,7 +14,7 @@
     # Override kernel config to disable unnecessary drivers for Steam Deck
     # This significantly reduces kernel build time by removing drivers for
     # hardware that will never be present on a Steam Deck
-    boot.kernelPackages = pkgs.linuxPackages_jovian.extend (
+    boot.kernelPackages = lib.mkForce (pkgs.linuxPackages_jovian.extend (
       self: super: {
         kernel = super.kernel.override {
           structuredExtraConfig = with lib.kernel; {
@@ -122,6 +122,6 @@
           };
         };
       }
-    );
+    ));
   };
 }
