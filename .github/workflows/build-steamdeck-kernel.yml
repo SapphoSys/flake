@@ -41,9 +41,30 @@ jobs:
           CURRENT_REV=$(nix flake metadata --json | jq -r '.locks.nodes.jovian.locked.rev // empty')
           echo "current-rev=${CURRENT_REV}" >> $GITHUB_OUTPUT
 
+          # For manual trigger, always build
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+            echo "Manual trigger - building kernel"
+            exit 0
+          fi
+
           # Get previous Jovian revision from previous commit
-          git fetch origin ${{ github.event.before || 'HEAD~1' }}
-          git checkout ${{ github.event.before || 'HEAD~1' }} -- flake.lock 2>/dev/null || true
+          BEFORE_SHA="${{ github.event.before }}"
+          if [ -z "${BEFORE_SHA}" ] || [ "${BEFORE_SHA}" = "0000000000000000000000000000000000000000" ]; then
+            # No previous commit available (first push or shallow checkout)
+            echo "changed=true" >> $GITHUB_OUTPUT
+            echo "No previous commit - building kernel"
+            exit 0
+          fi
+
+          # Fetch and check previous revision
+          git fetch --depth=2 origin "${BEFORE_SHA}" 2>/dev/null || {
+            echo "changed=true" >> $GITHUB_OUTPUT
+            echo "Cannot fetch previous commit - building kernel"
+            exit 0
+          }
+
+          git checkout "${BEFORE_SHA}" -- flake.lock 2>/dev/null || true
           PREV_REV=$(nix flake metadata --json 2>/dev/null | jq -r '.locks.nodes.jovian.locked.rev // empty' || echo "")
           git checkout HEAD -- flake.lock
 
