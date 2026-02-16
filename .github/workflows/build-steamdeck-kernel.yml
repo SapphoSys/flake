@@ -32,7 +32,7 @@ jobs:
         with:
           name: ${{ secrets.CACHIX_CACHE_NAME }}
           authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
-          pushFilter: "(-source$|nixos-system-serenity|linux-jovian)" # Only push kernel and system closure
+          pushFilter: "(-source$|linux-jovian)" # Only push kernel packages
 
       - name: Check for Jovian updates
         id: jovian-check
@@ -79,18 +79,10 @@ jobs:
             echo "No Jovian update detected"
           fi
 
-      - name: Build Steam Deck system
+      - name: Build kernel package
         if: steps.jovian-check.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
         run: |
-          echo "Building nixosConfigurations.serenity with Jovian kernel..."
-          nix build .#nixosConfigurations.serenity.config.system.build.toplevel \
-            --print-build-logs \
-            --fallback
-
-      - name: Build just the kernel package
-        if: steps.jovian-check.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
-        run: |
-          echo "Building standalone kernel package..."
+          echo "Building Jovian kernel package..."
           nix build .#nixosConfigurations.serenity.config.boot.kernelPackages.kernel \
             --print-build-logs \
             --fallback
