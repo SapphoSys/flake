@@ -1,0 +1,90 @@
+name: Build Steam Deck Kernel
+
+on:
+  # Run when flake.lock is updated (happens daily via update-flake.yml)
+  push:
+    branches: [master]
+    paths:
+      - "flake.lock"
+
+  # Allow manual triggering
+  workflow_dispatch:
+
+  # Run weekly as a fallback
+  schedule:
+    - cron: "0 2 * * 0" # Sundays at 2 AM UTC
+
+jobs:
+  build-kernel:
+    name: Build Jovian kernel for Steam Deck
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Nix
+        uses: DeterminateSystems/nix-installer-action@main
+        with:
+          extra-conf: |
+            system-features = nixos-test benchmark big-parallel kvm
+
+      - name: Setup Cachix
+        uses: cachix/cachix-action@v14
+        with:
+          name: ${{ secrets.CACHIX_CACHE_NAME }}
+          authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
+          pushFilter: "(-source$|nixos-system-serenity|linux-jovian)" # Only push kernel and system closure
+
+      - name: Check for Jovian updates
+        id: jovian-check
+        run: |
+          # Get current Jovian revision from flake.lock
+          CURRENT_REV=$(nix flake metadata --json | jq -r '.locks.nodes.jovian.locked.rev // empty')
+          echo "current-rev=${CURRENT_REV}" >> $GITHUB_OUTPUT
+
+          # Get previous Jovian revision from previous commit
+          git fetch origin ${{ github.event.before || 'HEAD~1' }}
+          git checkout ${{ github.event.before || 'HEAD~1' }} -- flake.lock 2>/dev/null || true
+          PREV_REV=$(nix flake metadata --json 2>/dev/null | jq -r '.locks.nodes.jovian.locked.rev // empty' || echo "")
+          git checkout HEAD -- flake.lock
+
+          echo "previous-rev=${PREV_REV}" >> $GITHUB_OUTPUT
+
+          # Check if Jovian actually changed
+          if [ "${CURRENT_REV}" != "${PREV_REV}" ] && [ -n "${PREV_REV}" ]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+            echo "Jovian updated: ${PREV_REV:0:8} -> ${CURRENT_REV:0:8}"
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "No Jovian update detected"
+          fi
+
+      - name: Build Steam Deck system
+        if: steps.jovian-check.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+        run: |
+          echo "Building nixosConfigurations.serenity with Jovian kernel..."
+          nix build .#nixosConfigurations.serenity.config.system.build.toplevel \
+            --print-build-logs \
+            --fallback
+
+      - name: Build just the kernel package
+        if: steps.jovian-check.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+        run: |
+          echo "Building standalone kernel package..."
+          nix build .#nixosConfigurations.serenity.config.boot.kernelPackages.kernel \
+            --print-build-logs \
+            --fallback
+
+      - name: Report build info
+        if: steps.jovian-check.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+        run: |
+          echo "✅ Build completed successfully!"
+          echo "Jovian revision: ${{ steps.jovian-check.outputs.current-rev }}"
+          echo "Kernel version:"
+          nix eval .#nixosConfigurations.serenity.config.boot.kernelPackages.kernel.version --raw
+          echo ""
+          echo "Packages pushed to Cachix: ${{ secrets.CACHIX_CACHE_NAME }}"
+
+      - name: Skip notification
+        if: steps.jovian-check.outputs.changed == 'false' && github.event_name != 'workflow_dispatch'
+        run: |
+          echo "⏭️  Skipping build - no Jovian update detected"
