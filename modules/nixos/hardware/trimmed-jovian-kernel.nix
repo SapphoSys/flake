@@ -11,117 +11,107 @@
   };
 
   config = lib.mkIf config.settings.hardware.trimmedJovianKernel.enable {
-    # Override kernel config to disable unnecessary drivers for Steam Deck
-    # This significantly reduces kernel build time by removing drivers for
-    # hardware that will never be present on a Steam Deck
-    boot.kernelPackages = lib.mkForce (pkgs.linuxPackages_jovian.extend (
-      self: super: {
-        kernel = super.kernel.override {
-          structuredExtraConfig = with lib.kernel; {
-            # ===== GPU Drivers =====
-            # Disable NVIDIA drivers (nouveau)
-            DRM_NOUVEAU = no;
-            DRM_NOVA = no;
+    # Use Jovian kernel but trim unnecessary drivers via kernelPatches
+    # This properly merges with Jovian's existing kernel configuration
+    boot.kernelPackages = lib.mkForce pkgs.linuxPackages_jovian;
 
-            # Disable Intel graphics drivers
-            DRM_I915 = no;
-            DRM_XE = no;
+    boot.kernelPatches = [
+      {
+        name = "trim-steam-deck-drivers";
+        patch = null;
+        structuredExtraConfig = with lib.kernel; {
+          # ===== GPU Drivers =====
+          # Disable NVIDIA drivers (nouveau)
+          DRM_NOUVEAU = lib.mkForce no;
+          DRM_NOVA = lib.mkForce no;
 
-            # Keep AMD GPU driver enabled (Steam Deck uses AMD RDNA 2)
-            DRM_AMDGPU = module;
-            DRM_AMD_DC = yes;
-            HSA_AMD = yes;
+          # Disable Intel graphics drivers
+          DRM_I915 = lib.mkForce no;
+          DRM_XE = lib.mkForce no;
 
-            # Disable other GPU vendors
-            DRM_RADEON = no; # Older AMD cards
-            DRM_GMA500 = no; # Intel GMA
-            DRM_MGAG200 = unset; # Matrox
-            DRM_AST = unset; # ASPEED
-            DRM_BOCHS = unset; # QEMU
-            DRM_CIRRUS_QEMU = unset;
-            DRM_QXL = unset; # QEMU/Xen
-            DRM_VIRTIO_GPU = unset; # Virtualization
-            DRM_VMWGFX = unset; # VMware
+          # Disable other GPU vendors (keep AMD only)
+          DRM_RADEON = lib.mkForce no; # Older AMD cards
+          DRM_GMA500 = lib.mkForce no; # Intel GMA
+          DRM_MGAG200 = lib.mkForce unset; # Matrox
+          DRM_AST = lib.mkForce unset; # ASPEED
+          DRM_BOCHS = lib.mkForce unset; # QEMU
+          DRM_CIRRUS_QEMU = lib.mkForce unset;
+          DRM_QXL = lib.mkForce unset; # QEMU/Xen
+          DRM_VIRTIO_GPU = lib.mkForce unset; # Virtualization
+          DRM_VMWGFX = lib.mkForce unset; # VMware
 
-            # ===== WiFi Drivers =====
-            # Disable all WiFi vendors except what Steam Deck uses
-            WLAN_VENDOR_ADMTEK = no;
-            WLAN_VENDOR_ATH = no; # Atheros (big time saver!)
-            WLAN_VENDOR_ATMEL = no;
-            WLAN_VENDOR_BROADCOM = no;
-            WLAN_VENDOR_CISCO = no;
-            WLAN_VENDOR_INTEL = no;
-            WLAN_VENDOR_INTERSIL = no;
-            WLAN_VENDOR_MARVELL = no;
-            WLAN_VENDOR_MEDIATEK = module; # Steam Deck uses MediaTek MT7921
-            WLAN_VENDOR_MICROCHIP = no;
-            WLAN_VENDOR_PURELIFI = no;
-            WLAN_VENDOR_RALINK = no;
-            WLAN_VENDOR_REALTEK = module; # Keep as backup
-            WLAN_VENDOR_RSI = no;
-            WLAN_VENDOR_SILABS = no;
-            WLAN_VENDOR_ST = no;
-            WLAN_VENDOR_TI = no;
-            WLAN_VENDOR_ZYDAS = no;
-            WLAN_VENDOR_QUANTENNA = no;
+          # ===== WiFi Drivers =====
+          # Disable all WiFi vendors except what Steam Deck uses
+          WLAN_VENDOR_ADMTEK = lib.mkForce no;
+          WLAN_VENDOR_ATH = lib.mkForce no; # Atheros (big time saver!)
+          WLAN_VENDOR_ATMEL = lib.mkForce no;
+          WLAN_VENDOR_BROADCOM = lib.mkForce no;
+          WLAN_VENDOR_CISCO = lib.mkForce no;
+          WLAN_VENDOR_INTEL = lib.mkForce no;
+          WLAN_VENDOR_INTERSIL = lib.mkForce no;
+          WLAN_VENDOR_MARVELL = lib.mkForce no;
+          WLAN_VENDOR_MICROCHIP = lib.mkForce no;
+          WLAN_VENDOR_PURELIFI = lib.mkForce no;
+          WLAN_VENDOR_RALINK = lib.mkForce no;
+          WLAN_VENDOR_RSI = lib.mkForce no;
+          WLAN_VENDOR_SILABS = lib.mkForce no;
+          WLAN_VENDOR_ST = lib.mkForce no;
+          WLAN_VENDOR_TI = lib.mkForce no;
+          WLAN_VENDOR_ZYDAS = lib.mkForce no;
+          WLAN_VENDOR_QUANTENNA = lib.mkForce no;
 
-            # ===== Media Drivers =====
-            # Steam Deck has no TV tuners, webcams, or capture cards
-            MEDIA_ANALOG_TV_SUPPORT = no;
-            MEDIA_DIGITAL_TV_SUPPORT = no;
-            MEDIA_RADIO_SUPPORT = no;
-            MEDIA_SDR_SUPPORT = no;
-            MEDIA_CEC_SUPPORT = no;
-            DVB_CORE = unset;
+          # ===== Media Drivers =====
+          # Steam Deck has no TV tuners, webcams, or capture cards
+          MEDIA_ANALOG_TV_SUPPORT = lib.mkForce no;
+          MEDIA_DIGITAL_TV_SUPPORT = lib.mkForce no;
+          MEDIA_RADIO_SUPPORT = lib.mkForce no;
+          MEDIA_SDR_SUPPORT = lib.mkForce no;
+          MEDIA_CEC_SUPPORT = lib.mkForce no;
+          DVB_CORE = lib.mkForce unset;
 
-            # ===== Other Unnecessary Hardware =====
-            NFC = no; # No NFC chip
-            HAMRADIO = no; # No amateur radio
-            STAGING = no; # Experimental/unmaintained drivers (huge!)
-            RC_CORE = unset; # Infrared remote controls
-            LIRC = unset; # IR transceivers
+          # ===== Other Unnecessary Hardware =====
+          NFC = lib.mkForce no; # No NFC chip
+          HAMRADIO = lib.mkForce no; # No amateur radio
+          STAGING = lib.mkForce no; # Experimental/unmaintained drivers (huge!)
+          RC_CORE = lib.mkForce unset; # Infrared remote controls
+          LIRC = lib.mkForce unset; # IR transceivers
 
-            # Old/obscure ethernet cards
-            NET_VENDOR_3COM = no;
-            NET_VENDOR_ADAPTEC = no;
-            NET_VENDOR_ALTEON = no;
-            NET_VENDOR_BROADCOM = no;
-            NET_VENDOR_BROCADE = no;
-            NET_VENDOR_CHELSIO = no;
-            NET_VENDOR_CISCO = no;
-            NET_VENDOR_DEC = no;
-            NET_VENDOR_DLINK = no;
-            NET_VENDOR_EMULEX = no;
-            NET_VENDOR_GOOGLE = no;
-            NET_VENDOR_HUAWEI = no;
-            NET_VENDOR_MARVELL = no;
-            NET_VENDOR_MELLANOX = no;
-            NET_VENDOR_MYRI = no;
-            NET_VENDOR_NETERION = no;
-            NET_VENDOR_NVIDIA = no;
-            NET_VENDOR_OKI = no;
-            NET_VENDOR_QLOGIC = no;
-            NET_VENDOR_SOLARFLARE = no;
-            NET_VENDOR_SUN = no;
-            NET_VENDOR_TEHUTI = no;
-            NET_VENDOR_TI = no;
-            NET_VENDOR_VIA = no;
+          # Old/obscure ethernet cards
+          NET_VENDOR_3COM = lib.mkForce no;
+          NET_VENDOR_ADAPTEC = lib.mkForce no;
+          NET_VENDOR_ALTEON = lib.mkForce no;
+          NET_VENDOR_BROADCOM = lib.mkForce no;
+          NET_VENDOR_BROCADE = lib.mkForce no;
+          NET_VENDOR_CHELSIO = lib.mkForce no;
+          NET_VENDOR_CISCO = lib.mkForce no;
+          NET_VENDOR_DEC = lib.mkForce no;
+          NET_VENDOR_DLINK = lib.mkForce no;
+          NET_VENDOR_EMULEX = lib.mkForce no;
+          NET_VENDOR_GOOGLE = lib.mkForce no;
+          NET_VENDOR_HUAWEI = lib.mkForce no;
+          NET_VENDOR_MARVELL = lib.mkForce no;
+          NET_VENDOR_MELLANOX = lib.mkForce no;
+          NET_VENDOR_MYRI = lib.mkForce no;
+          NET_VENDOR_NETERION = lib.mkForce no;
+          NET_VENDOR_NVIDIA = lib.mkForce no;
+          NET_VENDOR_OKI = lib.mkForce no;
+          NET_VENDOR_QLOGIC = lib.mkForce no;
+          NET_VENDOR_SOLARFLARE = lib.mkForce no;
+          NET_VENDOR_SUN = lib.mkForce no;
+          NET_VENDOR_TEHUTI = lib.mkForce no;
+          NET_VENDOR_TI = lib.mkForce no;
+          NET_VENDOR_VIA = lib.mkForce no;
 
-            # USB Serial adapters (keep core USB support)
-            USB_SERIAL_GENERIC = unset;
-            USB_SERIAL_SIMPLE = unset;
+          # USB Serial adapters (keep core USB support)
+          USB_SERIAL_GENERIC = lib.mkForce unset;
+          USB_SERIAL_SIMPLE = lib.mkForce unset;
 
-            # Disable most IIO sensors (keep what Steam Deck needs)
-            IIO_TRIGGERED_BUFFER = module; # Needed for Steam Deck sensors
-            # But disable specific vendors we don't need
-
-            # Industrial/embedded systems
-            INFINIBAND = unset; # InfiniBand networking (servers)
-            ISDN = no; # ISDN modems (obsolete)
-            CAN = unset; # CAN bus (automotive/industrial)
-          };
+          # Industrial/embedded systems
+          INFINIBAND = lib.mkForce unset; # InfiniBand networking (servers)
+          ISDN = lib.mkForce no; # ISDN modems (obsolete)
+          CAN = lib.mkForce unset; # CAN bus (automotive/industrial)
         };
       }
-    ));
+    ];
   };
 }
