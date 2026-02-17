@@ -17,6 +17,7 @@
 
     hardware = {
       audio.enable = false;
+      trimmedJovianKernel.enable = true;
     };
 
     profiles = {
