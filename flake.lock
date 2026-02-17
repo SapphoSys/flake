@@ -340,11 +340,11 @@
         "lastModified": 1731402384,
         "narHash": "sha256-OwUmrPfEehLDz0fl2ChYLK8FQM2p0G1+EMrGsYEq+6g=",
         "type": "tarball",
-        "url": "https://github.com/IBM/plex/releases/download/@ibm%2Fplex-mono@1.1.0/ibm-plex-mono.zip"
+        "url": "https://github.com/IBM/plex/releases/download/@ibm/plex-mono@1.1.0/ibm-plex-mono.zip"
       },
       "original": {
         "type": "tarball",
-        "url": "https://github.com/IBM/plex/releases/download/@ibm%2Fplex-mono@1.1.0/ibm-plex-mono.zip"
+        "url": "https://github.com/IBM/plex/releases/download/@ibm/plex-mono@1.1.0/ibm-plex-mono.zip"
       }
     },
     "indigo": {
@@ -481,11 +481,11 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1770864818,
-        "narHash": "sha256-VsRzFJ8+ndGgcwguZSQGHed/gragpW478qMqdNpm75k=",
+        "lastModified": 1771296409,
+        "narHash": "sha256-p0fEFcqNnhYBKsHTint5pwkcnQk1b68OeQJh95B9Adg=",
         "owner": "Infinidoge",
         "repo": "nix-minecraft",
-        "rev": "ca04d472340d6a3c8fe4f4a9c0d74faad048c204",
+        "rev": "22cb60087e549a90f6b0347e84ac178c0c9085ad",
         "type": "github"
       },
       "original": {
@@ -759,11 +759,11 @@
         "sqlite-lib-src": "sqlite-lib-src"
       },
       "locked": {
-        "lastModified": 1771253948,
-        "narHash": "sha256-D2pjWNGri9JWhLsYRv+KoG7duEgXJSBZP7eUpIkR/9s=",
+        "lastModified": 1771327841,
+        "narHash": "sha256-+89GXfhKRS63egvI7YmdYPSzKKiOEIrW1UFNwsLLP4Q=",
         "ref": "refs/heads/master",
-        "rev": "fd5328e019c48bada69a0fe2adbbdb83437afb11",
-        "revCount": 1961,
+        "rev": "8817c3ca119d07abef6871d2bd3d967e92e9bf20",
+        "revCount": 1975,
         "type": "git",
         "url": "https://tangled.org/tangled.org/core"
       },
@@ -819,11 +819,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1771056778,
-        "narHash": "sha256-c7cF4Gh6O/2OzDElcBgcyro2d3Xa4ciIHLxtG/iMrMg=",
+        "lastModified": 1771316515,
+        "narHash": "sha256-xXgfrG5e6tYCLlm9F90rqc/K8AAgv9CdoCk6djpJx58=",
         "owner": "auguwu",
         "repo": "vscode-insiders-nix",
-        "rev": "c4549ed0af9a3f18cf5fa6cddbc7a141848ddb35",
+        "rev": "7342fe9e37b45c1d9bc2d94369a61f7b95f29783",
         "type": "github"
       },
       "original": {
