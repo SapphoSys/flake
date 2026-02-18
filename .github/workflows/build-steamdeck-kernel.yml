@@ -87,6 +87,25 @@ jobs:
             --print-build-logs \
             --fallback
 
+      - name: Pin kernel in Cachix
+        if: steps.jovian-check.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+        env:
+          CACHIX_AUTH_TOKEN: ${{ secrets.CACHIX_AUTH_TOKEN }}
+        run: |
+          # Get kernel version for pin name
+          KERNEL_VERSION=$(nix eval .#nixosConfigurations.serenity.config.boot.kernelPackages.kernel.version --raw)
+          KERNEL_PATH=$(readlink -f result)
+
+          echo "📌 Pinning kernel ${KERNEL_VERSION} to Cachix..."
+
+          # Pin with version-specific name (keep last 5 versions)
+          cachix pin ${{ secrets.CACHIX_CACHE_NAME }} "jovian-kernel-${KERNEL_VERSION}" "${KERNEL_PATH}" --keep-revisions 5
+
+          # Also pin as "latest" for easy reference (keep last 3 revisions)
+          cachix pin ${{ secrets.CACHIX_CACHE_NAME }} "jovian-kernel-latest" "${KERNEL_PATH}" --keep-revisions 3
+
+          echo "✅ Pinned as jovian-kernel-${KERNEL_VERSION} and jovian-kernel-latest"
+
       - name: Report build info
         if: steps.jovian-check.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
         run: |
