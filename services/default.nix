@@ -17,5 +17,6 @@
     ./pocket-id
     ./prosody
     ./sapphic-moe
+    ./vikunja
   ];
 }
