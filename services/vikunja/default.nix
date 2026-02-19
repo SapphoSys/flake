@@ -28,7 +28,7 @@
       service = {
         publicurl = "https://vikunja.sappho.systems/";
         timezone = "UTC";
-        enableregistration = true;
+        enableregistration = false;
         enabletaskattachments = true;
         enabletaskcomments = true;
         enablecaldav = true;
