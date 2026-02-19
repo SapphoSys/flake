@@ -26,7 +26,7 @@
 
     settings = {
       service = {
-        publicurl = "https://vikunja.sappho.systems";
+        publicurl = "https://vikunja.sappho.systems/";
         timezone = "UTC";
         enableregistration = false;
         enabletaskattachments = true;
