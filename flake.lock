@@ -275,11 +275,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1771756436,
-        "narHash": "sha256-Tl2I0YXdhSTufGqAaD1ySh8x+cvVsEI1mJyJg12lxhI=",
+        "lastModified": 1771851181,
+        "narHash": "sha256-gFgE6mGUftwseV3DUENMb0k0EiHd739lZexPo5O/sdQ=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "5bd3589390b431a63072868a90c0f24771ff4cbb",
+        "rev": "9a4b494b1aa1b93d8edf167f46dc8e0c0011280c",
         "type": "github"
       },
       "original": {
@@ -340,11 +340,11 @@
         "lastModified": 1731402384,
         "narHash": "sha256-OwUmrPfEehLDz0fl2ChYLK8FQM2p0G1+EMrGsYEq+6g=",
         "type": "tarball",
-        "url": "https://github.com/IBM/plex/releases/download/@ibm%2Fplex-mono@1.1.0/ibm-plex-mono.zip"
+        "url": "https://github.com/IBM/plex/releases/download/@ibm/plex-mono@1.1.0/ibm-plex-mono.zip"
       },
       "original": {
         "type": "tarball",
-        "url": "https://github.com/IBM/plex/releases/download/@ibm%2Fplex-mono@1.1.0/ibm-plex-mono.zip"
+        "url": "https://github.com/IBM/plex/releases/download/@ibm/plex-mono@1.1.0/ibm-plex-mono.zip"
       }
     },
     "indigo": {
@@ -819,11 +819,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1771661621,
-        "narHash": "sha256-cEUAH1MoExoZOahkR5sqxtGuHgkbg9YSz4+hg6eyz28=",
+        "lastModified": 1771834963,
+        "narHash": "sha256-K4FSPBDZflunTbBMXOjPrfKBatFy6ZLjaBEaKEByGvE=",
         "owner": "auguwu",
         "repo": "vscode-insiders-nix",
-        "rev": "a5e12060278d083642b1314fe5c22fa8d9e623dd",
+        "rev": "4ff66da981f3972cd271148fdf753bbe7214ffbf",
         "type": "github"
       },
       "original": {
