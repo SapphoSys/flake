@@ -87,6 +87,14 @@ jobs:
             --print-build-logs \
             --fallback
 
+      - name: Push kernel to Cachix
+        if: steps.jovian-check.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+        run: |
+          KERNEL_PATH=$(readlink -f result)
+          echo "📤 Pushing kernel to Cachix..."
+          cachix push ${{ secrets.CACHIX_CACHE_NAME }} "${KERNEL_PATH}"
+          echo "✅ Kernel pushed successfully"
+
       - name: Pin kernel in Cachix
         if: steps.jovian-check.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
         env:
