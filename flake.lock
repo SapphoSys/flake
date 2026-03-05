@@ -275,11 +275,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1772569491,
-        "narHash": "sha256-bdr6ueeXO1Xg91sFkuvaysYF0mVdwHBpdyhTjBEWv+s=",
+        "lastModified": 1772633327,
+        "narHash": "sha256-jl+DJB2DUx7EbWLRng+6HNWW/1/VQOnf0NsQB4PlA7I=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "924e61f5c2aeab38504028078d7091077744ab17",
+        "rev": "5a75730e6f21ee624cbf86f4915c6e7489c74acc",
         "type": "github"
       },
       "original": {
@@ -410,6 +410,18 @@
         "url": "https://github.com/lucide-icons/lucide/releases/download/0.536.0/lucide-icons-0.536.0.zip"
       }
     },
+    "mermaid-src": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-/YOdECG2V5c3kJ1QfGvhziTT6K/Dx/4mOk2mr3Fs/do=",
+        "type": "file",
+        "url": "https://cdn.jsdelivr.net/npm/mermaid@11.12.3/dist/mermaid.min.js"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://cdn.jsdelivr.net/npm/mermaid@11.12.3/dist/mermaid.min.js"
+      }
+    },
     "nil": {
       "inputs": {
         "nixpkgs": [
@@ -481,11 +493,11 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1772334875,
-        "narHash": "sha256-AveYVY2plEJ62Br6iAd4fB5PDYyjJoTEmgdWRV3m+Vo=",
+        "lastModified": 1772592046,
+        "narHash": "sha256-+Lyl+mGVd0t2nlR6ODK/gvUHzMtF5qLlbTK+x5tCenU=",
         "owner": "Infinidoge",
         "repo": "nix-minecraft",
-        "rev": "a852ac73a4f9bf8270bdac90a72a28fef5df846b",
+        "rev": "483abf9ad6aeac1d61f2a5419ded2879f0c4795e",
         "type": "github"
       },
       "original": {
@@ -753,17 +765,18 @@
         "indigo": "indigo",
         "inter-fonts-src": "inter-fonts-src",
         "lucide-src": "lucide-src",
+        "mermaid-src": "mermaid-src",
         "nixpkgs": [
           "nixpkgs"
         ],
         "sqlite-lib-src": "sqlite-lib-src"
       },
       "locked": {
-        "lastModified": 1772554657,
-        "narHash": "sha256-kzWpuMNU4Q7uo5F3RCY4GL4pDGoC0aePygepALXKjEM=",
+        "lastModified": 1772647996,
+        "narHash": "sha256-SsFWAbGvYhXG0zrDlZewSlO5sq2riuj7+j0+SAZW7VM=",
         "ref": "refs/heads/master",
-        "rev": "2e78be8f1b88ea090fb762ff44926e9aa6090d3b",
-        "revCount": 2008,
+        "rev": "d0acfc930f3d0ca8f918cdc443d0278dcdc7e0d0",
+        "revCount": 2012,
         "type": "git",
         "url": "https://tangled.org/tangled.org/core"
       },
@@ -819,11 +832,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1772526033,
-        "narHash": "sha256-WShTEH5T5lq+iAnHxG6y613EiQMEZIybYyoq8Xz5uOk=",
+        "lastModified": 1772612239,
+        "narHash": "sha256-Kv5AmmN6/aQ79DpIfOsFLqyOgTksWvE6D7Og2v5+two=",
         "owner": "auguwu",
         "repo": "vscode-insiders-nix",
-        "rev": "685291e3d2acd9f35ceafde10e9718657440d0bd",
+        "rev": "985f56337ac743438c6cb85fa1e554c1fa34de2b",
         "type": "github"
       },
       "original": {
