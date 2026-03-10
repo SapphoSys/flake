@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 
 {
   age.secrets.nextcloud = {
@@ -10,6 +10,7 @@
     enable = true;
     hostName = "nc.sappho.systems";
     https = true;
+    package = pkgs.nextcloud32;
 
     extraApps = {
       inherit (config.services.nextcloud.package.packages.apps) contacts calendar tasks;
