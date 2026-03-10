@@ -9,6 +9,7 @@
   services.nextcloud = {
     enable = true;
     hostName = "nc.sappho.systems";
+    https = true;
 
     extraApps = {
       inherit (config.services.nextcloud.package.packages.apps) contacts calendar tasks;
@@ -17,6 +18,12 @@
     config = {
       adminpassFile = config.age.secrets.nextcloud.path;
       dbtype = "sqlite";
+    };
+
+    settings = {
+      overwriteprotocol = "https";
+      trusted_proxies = [ "127.0.0.1" ];
+      default_phone_region = "US";
     };
 
     extraAppsEnable = true;
