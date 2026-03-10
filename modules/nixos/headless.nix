@@ -21,7 +21,7 @@
     };
 
     # Disable suspend and hibernation on headless systems
-    systemd.sleep.extraConfig = ''
+    systemd.sleep.settings.Sleep = ''
       AllowSuspend=no
       AllowHibernation=no
     '';
