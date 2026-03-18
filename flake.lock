@@ -297,11 +297,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1773681856,
-        "narHash": "sha256-+bRqxoFCJFO9ZTFhcCkzNXbDT3b8AEk88fyjB7Is6eo=",
+        "lastModified": 1773810247,
+        "narHash": "sha256-6Vz1Thy/1s7z+Rq5OfkWOBAdV4eD+OrvDs10yH6xJzQ=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "57d5560ee92a424fb71fde800acd6ed2c725dfce",
+        "rev": "d47357a4c806d18a3e853ad2699eaec3c01622e7",
         "type": "github"
       },
       "original": {
@@ -406,11 +406,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1773734427,
-        "narHash": "sha256-++kBv60TZhErAx0gHW+JbMPcrHTZNyvtqTfwyR+mZCU=",
+        "lastModified": 1773818560,
+        "narHash": "sha256-WG+bDq0UenMRtbSZsMN/d9xVlpqZ1nVcfl5tflbbRu4=",
         "owner": "Jovian-Experiments",
         "repo": "Jovian-NixOS",
-        "rev": "b67d0b7850a4ee02c92e4917dc88b9018adfce97",
+        "rev": "8314448191245c39cee6e380200f2ec281862332",
         "type": "github"
       },
       "original": {
@@ -551,16 +551,32 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1773646010,
-        "narHash": "sha256-iYrs97hS7p5u4lQzuNWzuALGIOdkPXvjz7bviiBjUu8=",
+        "lastModified": 1773734432,
+        "narHash": "sha256-IF5ppUWh6gHGHYDbtVUyhwy/i7D261P7fWD1bPefOsw=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "5b2c2d84341b2afb5647081c1386a80d7a8d8605",
+        "rev": "cda48547b432e8d3b18b4180ba07473762ec8558",
         "type": "github"
       },
       "original": {
         "owner": "nixos",
         "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs-fetch-deno": {
+      "locked": {
+        "lastModified": 1766410835,
+        "narHash": "sha256-dRhVt0aFDyTqppyzRLxiO1JZEAoIA2fUnaeyJTe+UwU=",
+        "owner": "aMOPel",
+        "repo": "nixpkgs",
+        "rev": "c9801acc8c4fac6377d076bc1c102b15bd9cfa6f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "aMOPel",
+        "ref": "feat/fetchDenoDeps",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -621,6 +637,7 @@
         "solaar": "solaar",
         "srcds-nix": "srcds-nix",
         "tangled": "tangled",
+        "tranquil": "tranquil",
         "vscode-insiders": "vscode-insiders"
       }
     },
@@ -812,17 +829,38 @@
         "sqlite-lib-src": "sqlite-lib-src"
       },
       "locked": {
-        "lastModified": 1773741732,
-        "narHash": "sha256-tx954p87D99JB9Xju6ye9Gwfsak84A+fvq0ceLmP2XI=",
+        "lastModified": 1773827580,
+        "narHash": "sha256-bPjFWpoXkiLWhGe7AfgIofLsl0qw6hLTqGygQMPz5BA=",
         "ref": "refs/heads/master",
-        "rev": "2302ce917997e532c1db5b913d5820383156ac26",
-        "revCount": 2070,
+        "rev": "31a71987198dd43c4879baa26272612791e880a2",
+        "revCount": 2071,
         "type": "git",
         "url": "https://tangled.org/tangled.org/core"
       },
       "original": {
         "type": "git",
         "url": "https://tangled.org/tangled.org/core"
+      }
+    },
+    "tranquil": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "nixpkgs-fetch-deno": "nixpkgs-fetch-deno"
+      },
+      "locked": {
+        "lastModified": 1773836253,
+        "narHash": "sha256-JQoSwks5tw7V7IXXsy8J/fqESAjb1XBOjZhq+DIXEjs=",
+        "ref": "refs/heads/main",
+        "rev": "ebf5af49223675980f78df92fdd750d21f6bcd54",
+        "revCount": 229,
+        "type": "git",
+        "url": "https://tangled.org/tranquil.farm/tranquil-pds"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://tangled.org/tranquil.farm/tranquil-pds"
       }
     },
     "treefmt-nix": {
@@ -872,11 +910,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1773649918,
-        "narHash": "sha256-cwFM6y5DAbdGDmiSueQ1PxD8i8u0CUayKB8KCcqPPxE=",
+        "lastModified": 1773822183,
+        "narHash": "sha256-T8EAYKr3A4fV+50o+s2X7fR4T88Mzl5+Om9+F/NpZBE=",
         "owner": "auguwu",
         "repo": "vscode-insiders-nix",
-        "rev": "a1dd308c8c23de0d37619cae87350eac39569c30",
+        "rev": "e8d6970185821aa4a94e2bd714091205c8b6b4bd",
         "type": "github"
       },
       "original": {
