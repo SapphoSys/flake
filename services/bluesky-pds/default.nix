@@ -17,7 +17,6 @@
       PDS_BLOB_UPLOAD_LIMIT = "200000000"; # 200 MB
       PDS_CRAWLERS = lib.concatStringsSep "," [
         "https://bsky.network"
-        "https://relay.cerulea.blue"
         "https://relay.upcloud.world"
         "https://atproto.africa"
       ];
