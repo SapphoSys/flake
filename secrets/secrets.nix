@@ -31,5 +31,4 @@ in
   "pocket-id.age".publicKeys = keys;
   "pocket-id-encryption-key.age".publicKeys = keys;
   "sapphic-moe.age".publicKeys = keys;
-  "vikunja.age".publicKeys = keys;
 }
