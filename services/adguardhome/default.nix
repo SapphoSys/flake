@@ -1,6 +1,6 @@
 {
   services.adguardhome = {
-    enable = true;
+    enable = false;
 
     # We'll be using Tailscale Services to serve AdGuard Home as a subdomain in our tailnet.
     host = "127.0.0.1";
