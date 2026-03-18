@@ -77,6 +77,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    tranquil = {
+      url = "git+https://tangled.org/tranquil.farm/tranquil-pds";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     ## Visual Studio Code Insiders
     vscode-insiders = {
       url = "github:auguwu/vscode-insiders-nix";

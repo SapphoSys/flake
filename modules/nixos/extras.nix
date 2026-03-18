@@ -8,9 +8,10 @@
 
   imports = [
     inputs.home-manager.nixosModules.home-manager
+    inputs.nix-minecraft.nixosModules.minecraft-servers
     inputs.ragenix.nixosModules.default
     inputs.srcds-nix.nixosModules.default
     inputs.tangled.nixosModules.knot
-    inputs.nix-minecraft.nixosModules.minecraft-servers
+    inputs.tranquil.nixosModules.default
   ];
 }
