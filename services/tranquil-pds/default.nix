@@ -14,6 +14,7 @@
       server = {
         port = 3335;
         hostname = "velvet.sappho.systems";
+        age_assurance_override = true;
       };
 
       firehose.crawlers = [
@@ -28,7 +29,6 @@
     };
 
     environmentFiles = [ config.age.secrets.tranquil-pds.path ];
-
   };
 
   services.caddy.virtualHosts."velvet.sappho.systems" = {
