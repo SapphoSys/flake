@@ -14,6 +14,12 @@
 
     extraApps = {
       inherit (config.services.nextcloud.package.packages.apps) contacts calendar tasks;
+      dav_push = {
+        appName = "dav_push";
+        appVersion = "1.0.1";
+        sha512 = "29b9d9a741709bad372453519be74a5661c0018c0fef135db3fef78117d8b6a2c20563b5b97bc73567f577143b695749806529fbcff4f4559ed428456c19453b";
+        url = "https://github.com/bitfireAT/nc_ext_dav_push/releases/download/v1.0.1/dav_push.tar.gz";
+      };
     };
 
     config = {
