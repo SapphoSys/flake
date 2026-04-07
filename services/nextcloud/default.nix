@@ -14,7 +14,7 @@
 
     extraApps = {
       inherit (config.services.nextcloud.package.packages.apps) contacts calendar tasks;
-      dav_push = {
+      dav_push = pkgs.fetchNextcloudApp {
         appName = "dav_push";
         appVersion = "1.0.1";
         sha512 = "29b9d9a741709bad372453519be74a5661c0018c0fef135db3fef78117d8b6a2c20563b5b97bc73567f577143b695749806529fbcff4f4559ed428456c19453b";
