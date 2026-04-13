@@ -4,8 +4,6 @@
   age.secrets.vikunja = {
     file = ../../secrets/vikunja.age;
     mode = "600";
-    owner = "vikunja";
-    group = "vikunja";
   };
 
   services.vikunja = {
