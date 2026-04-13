@@ -18,5 +18,6 @@
     ./prosody
     ./sapphic-moe
     ./tranquil-pds
+    ./vikunja
   ];
 }
