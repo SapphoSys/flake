@@ -7,7 +7,7 @@
   };
 
   services.vikunja = {
-    enable = false;
+    enable = true;
 
     frontendScheme = "https";
     frontendHostname = "vikunja.sappho.systems";
