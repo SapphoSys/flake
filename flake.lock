@@ -47,11 +47,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1776190523,
-        "narHash": "sha256-qfZWzaWuXfbF487cXj43uT7HWtqF45A+g7g59fOPYsk=",
+        "lastModified": 1776420287,
+        "narHash": "sha256-0P2QyDM8R1FFww//TNDLTRVnVkQxVdbEVQiVuyD1SqY=",
         "owner": "catppuccin",
         "repo": "nix",
-        "rev": "2eefec08414e2f90824bf2b508ea38ef6f295dfa",
+        "rev": "bdf0285dc7978ebd78b76054631d7ef05680895e",
         "type": "github"
       },
       "original": {
@@ -406,11 +406,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1776335039,
-        "narHash": "sha256-2lkQhrv6YUCeMlC/lclzq9vkTALv/ptv7d0jIhZnrPQ=",
+        "lastModified": 1776428236,
+        "narHash": "sha256-+0SyQglnT2xUiyY07155G+O7aUWISELwqtTnfURufRU=",
         "owner": "Jovian-Experiments",
         "repo": "Jovian-NixOS",
-        "rev": "cbdf76c063b48d5d755fb26540367b8c2457c2ca",
+        "rev": "eac78fc379ca47f7e21be8539c405e5fb489a857",
         "type": "github"
       },
       "original": {
@@ -813,11 +813,11 @@
         "sqlite-lib-src": "sqlite-lib-src"
       },
       "locked": {
-        "lastModified": 1776325582,
-        "narHash": "sha256-aR2qsHLsHScVzQzOWyJsWKrDJ7xJy+03RVYBPWC/yh8=",
+        "lastModified": 1776427995,
+        "narHash": "sha256-bUR/cHqZP1zigWCo59KFF+F6UDuGM9q5CiFHdvnvSO8=",
         "ref": "refs/heads/master",
-        "rev": "3e1b98432931cd6a1491be4762dcb508dd9085f3",
-        "revCount": 2247,
+        "rev": "956f97c314517efbfa18d04ce8e0234e6609a30a",
+        "revCount": 2250,
         "type": "git",
         "url": "https://tangled.org/tangled.org/core"
       },
@@ -833,11 +833,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1776378750,
-        "narHash": "sha256-1eo9VYNweaIVEJ5f2boFPbIqorpXfRrytn4AxpUkADg=",
+        "lastModified": 1776428306,
+        "narHash": "sha256-N5LdnZaZTBThUrFEbGe0Jb/0fuue/IEtCsBm9HTdGcc=",
         "ref": "refs/heads/main",
-        "rev": "3e7a1997366e0e38d871f80338098a0ada640cad",
-        "revCount": 305,
+        "rev": "a20e4e05e6a5201e810c6eb1182ede18e5352ef0",
+        "revCount": 306,
         "type": "git",
         "url": "https://tangled.org/tranquil.farm/tranquil-pds"
       },
@@ -893,11 +893,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1776329014,
-        "narHash": "sha256-bj8NEbHroXfEoVZvElB4UTr/G2L3GmqdbznCx4FSRFU=",
+        "lastModified": 1776415372,
+        "narHash": "sha256-7Mb1PBIVwHxni+95rfx8DakNh5a5fsbOIgio4fKSvT8=",
         "owner": "auguwu",
         "repo": "vscode-insiders-nix",
-        "rev": "300d7732d7e2c5d18053de04cef4f9021746f86f",
+        "rev": "7d0f4fca1e4a1cf9537d2fbd0d27363f6127c15b",
         "type": "github"
       },
       "original": {
