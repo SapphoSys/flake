@@ -6,9 +6,6 @@
 
 let
   packages = with pkgs; [
-    # dev tools
-    zed-editor
-
     # fonts
     iosevka
     inter
