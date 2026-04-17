@@ -41,6 +41,7 @@
       "steam"
       "tailscale-app"
       "telegram"
+      "thunderbird"
       "whatsapp"
     ];
   };
