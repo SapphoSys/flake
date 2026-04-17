@@ -1,2 +1,5 @@
 # ignore output from nix build
 result*
+
+# mac
+.DS_Store
