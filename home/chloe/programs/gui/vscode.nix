@@ -1,6 +1,59 @@
-{ osConfig, pkgs, ... }:
-
 {
+  osConfig,
+  pkgs,
+  lib,
+  config,
+  ...
+}:
+let
+  cfg = config.programs.vscode;
+  vscodePname = cfg.package.pname;
+
+  configDir =
+    {
+      "vscode" = "Code";
+      "vscode-insiders" = "Code - Insiders";
+      "vscodium" = "VSCodium";
+    }
+    .${vscodePname};
+
+  userDir =
+    if pkgs.stdenv.hostPlatform.isDarwin then
+      "Library/Application Support/${configDir}/User"
+    else
+      "${config.xdg.configHome}/${configDir}/User";
+
+  configFilePath = "${userDir}/settings.json";
+  tasksFilePath = "${userDir}/tasks.json";
+  keybindingsFilePath = "${userDir}/keybindings.json";
+
+  filesToMakeMutable = lib.flatten [
+    (lib.optional (cfg.profiles.default.userTasks != { }) tasksFilePath)
+    (lib.optional (cfg.profiles.default.userSettings != { }) configFilePath)
+    (lib.optional (cfg.profiles.default.keybindings != [ ]) keybindingsFilePath)
+  ];
+
+  # Generate the shell commands to replace symlinks with copies
+  makeFileMutable = file: ''
+    target="$HOME/${file}"
+    if [ -L "$target" ]; then
+      real_source=$(readlink "$target")
+      echo "Making mutable: $target"
+      rm "$target"
+      cp "$real_source" "$target"
+      chmod u+w "$target"
+    elif [ -f "$target" ]; then
+      echo "Already mutable: $target"
+    fi
+  '';
+in
+{
+  # Activation script to make VSCode config files mutable
+  home.activation.vscodeFileMutability = lib.hm.dag.entryAfter [ "linkGeneration" ] ''
+    echo "Making VS Code config files mutable..."
+    ${lib.concatMapStrings makeFileMutable filesToMakeMutable}
+  '';
+
   programs.vscode = {
     inherit (osConfig.settings.profiles.graphical) enable;
     package = pkgs.vscode-insiders;
