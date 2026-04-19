@@ -833,11 +833,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1776428306,
-        "narHash": "sha256-N5LdnZaZTBThUrFEbGe0Jb/0fuue/IEtCsBm9HTdGcc=",
+        "lastModified": 1776547148,
+        "narHash": "sha256-aPOSe75vnelGo3j95OKDL+STKVK1QfwAHR/xMy9bkfE=",
         "ref": "refs/heads/main",
-        "rev": "a20e4e05e6a5201e810c6eb1182ede18e5352ef0",
-        "revCount": 306,
+        "rev": "ace105899fbf55e8961a102bda3b83c2872292ef",
+        "revCount": 309,
         "type": "git",
         "url": "https://tangled.org/tranquil.farm/tranquil-pds"
       },
@@ -893,11 +893,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1776415372,
-        "narHash": "sha256-7Mb1PBIVwHxni+95rfx8DakNh5a5fsbOIgio4fKSvT8=",
+        "lastModified": 1776500515,
+        "narHash": "sha256-XZLWOt2/WHLFOPZ9f12p/k3XUopEMIEhKjfUGQKajjw=",
         "owner": "auguwu",
         "repo": "vscode-insiders-nix",
-        "rev": "7d0f4fca1e4a1cf9537d2fbd0d27363f6127c15b",
+        "rev": "c0ba464715e493692b36ec113a36a9314e4660c6",
         "type": "github"
       },
       "original": {
