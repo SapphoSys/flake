@@ -297,11 +297,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1776454077,
-        "narHash": "sha256-7zSUFWsU0+jlD7WB3YAxQ84Z/iJurA5hKPm8EfEyGJk=",
+        "lastModified": 1776562531,
+        "narHash": "sha256-Lh5Ns9DI67E+lSMOCGK0S+mFPy0mz0yOGiJTUXiR9JI=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "565e5349208fe7d0831ef959103c9bafbeac0681",
+        "rev": "5b56ad02dc643808b8af6d5f3ff179e2ce9593f4",
         "type": "github"
       },
       "original": {
@@ -515,11 +515,11 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1776310483,
-        "narHash": "sha256-xMFl+umxGmo5VEgcZcXT5Dk9sXU5WyTRz1Olpywr/60=",
+        "lastModified": 1776569839,
+        "narHash": "sha256-+GnZ1rcrcTICvfRrUvDt0m+JFV4DYoPp3O/4Ad6VNLc=",
         "owner": "Infinidoge",
         "repo": "nix-minecraft",
-        "rev": "74abd91054e2655d6c392428a27e5d27edd5e6bf",
+        "rev": "c36e846a0b742fda93c86d930a9c34dd2a1cb334",
         "type": "github"
       },
       "original": {
@@ -833,11 +833,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1776547148,
-        "narHash": "sha256-aPOSe75vnelGo3j95OKDL+STKVK1QfwAHR/xMy9bkfE=",
+        "lastModified": 1776631827,
+        "narHash": "sha256-3C5lqjfuhSJcvGJx+G27oROreIRKM3gJMBlR6tcmlYo=",
         "ref": "refs/heads/main",
-        "rev": "ace105899fbf55e8961a102bda3b83c2872292ef",
-        "revCount": 309,
+        "rev": "0fab8f2eb9b145e2eedb820a46d3db1aa8fc5885",
+        "revCount": 311,
         "type": "git",
         "url": "https://tangled.org/tranquil.farm/tranquil-pds"
       },
