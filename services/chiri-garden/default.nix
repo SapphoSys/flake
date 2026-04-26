@@ -16,6 +16,7 @@ let
     pnpmDeps = pkgs.fetchPnpmDeps {
       pname = "chiri-garden";
       inherit src;
+      fetcherVersion = 3;
       hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
     };
 
