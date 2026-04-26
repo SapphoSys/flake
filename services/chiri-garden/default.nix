@@ -3,7 +3,7 @@
 let
   src = pkgs.fetchFromGitHub {
     owner = "SapphoSys";
-    repo = "chiri";
+    repo = "chiri.garden";
     rev = "main";
     hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
   };
