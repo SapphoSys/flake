@@ -16,6 +16,7 @@
     ./outline
     ./pocket-id
     ./prosody
+    ./chiri-garden
     ./sapphic-moe
     ./tranquil-pds
     ./vikunja
