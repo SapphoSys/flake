@@ -22,7 +22,6 @@
     # Casks (GUI applications)
     casks = [
       "1password"
-      "bruno"
       "crossover"
       "discord"
       "figma"
