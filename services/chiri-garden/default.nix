@@ -15,9 +15,10 @@ let
 
     pnpmDeps = pkgs.fetchPnpmDeps {
       pname = "chiri-garden";
+      pnpm = pkgs.pnpm_9;
       inherit src;
       fetcherVersion = 3;
-      hash = "sha256-IWZODGztjxrka9DFKDkSE2r4ekEOJbJyH6fbD/jUwQQ=";
+      hash = "";
     };
 
     nativeBuildInputs = [
