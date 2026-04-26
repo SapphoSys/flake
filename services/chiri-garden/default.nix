@@ -18,7 +18,7 @@ let
       pnpm = pkgs.pnpm_9;
       inherit src;
       fetcherVersion = 3;
-      hash = "";
+      hash = "sha256-SW7jFTDztma4wcuyVB8jgtlV/BaBuJZH7MeDGxdjQog=";
     };
 
     nativeBuildInputs = [
