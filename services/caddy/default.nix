@@ -24,6 +24,8 @@
         tls {
           dns bunny {env.BUNNY_API_KEY}
           resolvers 9.9.9.9 149.112.112.112
+          propagation_delay 2m
+          propagation_timeout -1
         }
       }
       (common) {
