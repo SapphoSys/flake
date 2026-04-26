@@ -14,6 +14,7 @@ let
     inherit src;
 
     pnpmDeps = pkgs.fetchPnpmDeps {
+      pname = "chiri-garden";
       inherit src;
       hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
     };
