@@ -5,7 +5,7 @@ let
     owner = "SapphoSys";
     repo = "chiri.garden";
     rev = "master";
-    hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+    hash = "sha256-xS9u2GPfxC+vuaQxIfg5tVoISUxOUwyY0vGF9MXtJXU=";
   };
 
   chiri-garden = pkgs.stdenv.mkDerivation {
