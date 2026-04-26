@@ -4,7 +4,7 @@ let
   src = pkgs.fetchFromGitHub {
     owner = "SapphoSys";
     repo = "chiri.garden";
-    rev = "main";
+    rev = "master";
     hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
   };
 
