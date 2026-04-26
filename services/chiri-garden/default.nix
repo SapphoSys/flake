@@ -1,26 +1,30 @@
 { pkgs, ... }:
 
 let
-  chiri-garden = pkgs.buildPnpmPackage {
+  src = pkgs.fetchFromGitHub {
+    owner = "SapphoSys";
+    repo = "chiri";
+    rev = "main";
+    hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+  };
+
+  chiri-garden = pkgs.stdenv.mkDerivation {
     pname = "chiri-garden";
     version = "0.0.1";
+    inherit src;
 
-    src = pkgs.fetchFromGitHub {
-      owner = "SapphoSys";
-      repo = "chiri";
-      rev = "main";
+    pnpmDeps = pkgs.fetchPnpmDeps {
+      inherit src;
       hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
     };
 
-    pnpmDeps = pkgs.pnpm.fetchDeps {
-      pname = "chiri-garden";
-      version = "0.0.1";
-      src = chiri-garden.src;
-      hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
-    };
-
-    # sharp requires libvips at build time for native bindings
-    nativeBuildInputs = [ pkgs.pkg-config pkgs.vips ];
+    nativeBuildInputs = [
+      pkgs.nodejs
+      pkgs.pnpm_9
+      pkgs.pnpmConfigHook
+      pkgs.pkg-config
+      pkgs.vips
+    ];
     buildInputs = [ pkgs.vips ];
 
     buildPhase = ''
