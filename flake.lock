@@ -297,11 +297,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1777151655,
-        "narHash": "sha256-Th3a5OZyEy4kCoyLfefnt+2dwRIrFQqYgMsayF9qzFw=",
+        "lastModified": 1777308348,
+        "narHash": "sha256-DJx9wnerjsOqKOo8I7/u5ENRhRWFF2mbYcACF+mn5LU=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "6f59831b23d03bbf4fbd13ad167ae25da294cc14",
+        "rev": "a28e848a01044f47679453aae75f6253bef7903e",
         "type": "github"
       },
       "original": {
@@ -813,11 +813,11 @@
         "sqlite-lib-src": "sqlite-lib-src"
       },
       "locked": {
-        "lastModified": 1777129244,
-        "narHash": "sha256-4+f+RrVXbtBRuffJg6QyANOc/H9MMpp9PjnxwlUU6Hk=",
+        "lastModified": 1777296150,
+        "narHash": "sha256-lKHXquc1HFRflhLtP6MVgenAyeJ9HmTeIgV2NHF2ExI=",
         "ref": "refs/heads/master",
-        "rev": "6a27cd259b67bdad85e8d82a31543cc11c309fc6",
-        "revCount": 2274,
+        "rev": "120cf31d890bc7de9e33e9d4e9d652c4c07da1c2",
+        "revCount": 2280,
         "type": "git",
         "url": "https://tangled.org/tangled.org/core"
       },
@@ -833,11 +833,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1777100352,
-        "narHash": "sha256-h4f3O0EZKkpldf9kyfcQK2OdAJw24dPzORShBHdlpyA=",
+        "lastModified": 1777238007,
+        "narHash": "sha256-frhz8tIiORLOK7dy+YqmUzCSJHdeaWgVsk1lXaWwawM=",
         "ref": "refs/heads/main",
-        "rev": "0455dc20bdfe7a1090ed176cc26f15b9b172a86e",
-        "revCount": 324,
+        "rev": "75b9e3165f8ec8d77a6be74867d64c5d3d45bec1",
+        "revCount": 328,
         "type": "git",
         "url": "https://tangled.org/tranquil.farm/tranquil-pds"
       },
@@ -893,11 +893,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1777020589,
-        "narHash": "sha256-dkn9uoIK96SOBxAPbUuQ88C0yABYlot6NJhspqV2iS0=",
+        "lastModified": 1777192520,
+        "narHash": "sha256-RNCT6okE/qYeAmPJJ8VMF0uWwDu+bs/oasS5GjWhLaI=",
         "owner": "auguwu",
         "repo": "vscode-insiders-nix",
-        "rev": "2064414e9cb106b924d211c6cbca019251582722",
+        "rev": "9c37b77d45098c1842059b3ba141a55d43405444",
         "type": "github"
       },
       "original": {
