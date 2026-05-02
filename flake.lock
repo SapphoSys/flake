@@ -47,11 +47,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1777574785,
-        "narHash": "sha256-wgM3MbJ0eVaJFdigFno+DGNGoQRW5XNu7VQ+KCYNNlw=",
+        "lastModified": 1777637913,
+        "narHash": "sha256-IV0MJUCncmFUpcRRoHR11gK6VR+hpN/Vtaz91+dsPPE=",
         "owner": "catppuccin",
         "repo": "nix",
-        "rev": "b2d0b8ccbe1f3af05252716d5069364fb88e0386",
+        "rev": "a199649e9941490ab712aa891c144e305d165ef8",
         "type": "github"
       },
       "original": {
@@ -201,11 +201,11 @@
         "nixpkgs-lib": "nixpkgs-lib"
       },
       "locked": {
-        "lastModified": 1775087534,
-        "narHash": "sha256-91qqW8lhL7TLwgQWijoGBbiD4t7/q75KTi8NxjVmSmA=",
+        "lastModified": 1777678872,
+        "narHash": "sha256-EPIFsulyon7Z1vLQq5Fk64GR8L7cQsT+IPhcsukVbgk=",
         "owner": "hercules-ci",
         "repo": "flake-parts",
-        "rev": "3107b77cd68437b9a76194f0f7f9c55f2329ca5b",
+        "rev": "5250617bffd85403b14dbf43c3870e7f255d2c16",
         "type": "github"
       },
       "original": {
@@ -297,11 +297,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1777594677,
-        "narHash": "sha256-h90sHwoRJLRvaTpZroTvU2JRHDFj0czUafM8eqLe1RI=",
+        "lastModified": 1777679572,
+        "narHash": "sha256-egYNbRrkn+6SwTHinhdb6WUfzzdC3nXfCRqS321VylY=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "899c08a15beae5da51a5cecd6b2b994777a948da",
+        "rev": "9cb587ade2aa1b4a7257f0238d41072690b0ca4f",
         "type": "github"
       },
       "original": {
@@ -406,11 +406,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1777364832,
-        "narHash": "sha256-c9AvQrhfwCAVLG8WdFuNOOx/oSPnkw4WDpIlVJ9Cilk=",
+        "lastModified": 1777614199,
+        "narHash": "sha256-k8fgidVoDNQTZWGLdhe6kLgpsLcydhPzal5YKVwxD2U=",
         "owner": "Jovian-Experiments",
         "repo": "Jovian-NixOS",
-        "rev": "f0813b4aefdca5f66a5de7633902d136a9753f88",
+        "rev": "79f3e3cc5c643138b7b3405c42681451be85d838",
         "type": "github"
       },
       "original": {
@@ -515,11 +515,11 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1777521040,
-        "narHash": "sha256-wqjD2tlQltiPzV1jFRSZeHrvBIZl9AKk978S789BStE=",
+        "lastModified": 1777608106,
+        "narHash": "sha256-wiBYCs2swNJefX1xH7tiyZLAw9ZmHZQ5DRo8VeFW6fg=",
         "owner": "Infinidoge",
         "repo": "nix-minecraft",
-        "rev": "5c95b434c9471fb45e6f748afa15d9fd714843d8",
+        "rev": "6643116cd25bd53641a9724db8a530e36899484d",
         "type": "github"
       },
       "original": {
@@ -567,11 +567,11 @@
     },
     "nixpkgs-lib": {
       "locked": {
-        "lastModified": 1774748309,
-        "narHash": "sha256-+U7gF3qxzwD5TZuANzZPeJTZRHS29OFQgkQ2kiTJBIQ=",
+        "lastModified": 1777168982,
+        "narHash": "sha256-GOkGPcboWE9BmGCRMLX3worL4EMnsnG8MyKmXNeYuhQ=",
         "owner": "nix-community",
         "repo": "nixpkgs.lib",
-        "rev": "333c4e0545a6da976206c74db8773a1645b5870a",
+        "rev": "f5901329dade4a6ea039af1433fb087bd9c1fe14",
         "type": "github"
       },
       "original": {
@@ -813,11 +813,11 @@
         "sqlite-lib-src": "sqlite-lib-src"
       },
       "locked": {
-        "lastModified": 1777554752,
-        "narHash": "sha256-9Asp/fulD0Trs4A9MtPNA5/q+WxJS2uPs4BQfRtdU/c=",
+        "lastModified": 1777663679,
+        "narHash": "sha256-PIo4bEwjTCD/Owf0RKT7h6PSKHrSqy8HfinF0NIXTRs=",
         "ref": "refs/heads/master",
-        "rev": "0e6d9d8c30add1d25dd6562d302c00724a764ca5",
-        "revCount": 2301,
+        "rev": "97bb4786c47e2cc000f81996fac9bf247a68170d",
+        "revCount": 2312,
         "type": "git",
         "url": "https://tangled.org/tangled.org/core"
       },
@@ -893,11 +893,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1777539364,
-        "narHash": "sha256-1en2rHRr8LwGuveOy3/KSGJURYsqnD/JR/JjmxCS2+k=",
+        "lastModified": 1777625209,
+        "narHash": "sha256-SJi+99BBel6LO+b3qZAiBVKzS/DqWl1Yd/YJaC+9HoE=",
         "owner": "auguwu",
         "repo": "vscode-insiders-nix",
-        "rev": "d460aaefc5c7ff0111152838c3981f7e5f9dbbee",
+        "rev": "3671fc7f2a0b20d42eacc1fd8989e40fb8c1dfdd",
         "type": "github"
       },
       "original": {
