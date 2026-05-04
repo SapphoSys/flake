@@ -1,7 +1,33 @@
 # Partially taken from https://github.com/isabelroses/dotfiles/blob/main/modules/base/nix/nix.nix
+{ pkgs, ... }:
 
 {
+  # Use Lix's latest package set for Nix tools.
+  nixpkgs.overlays = [
+    (final: prev: {
+      # Custom Lix with lesbian pride 🏳️‍⚧️
+      # Inspired by https://github.com/isabelroses/izlix
+      lix = (prev.lixPackageSets.latest.lix).overrideAttrs (oa: {
+        postPatch = oa.postPatch or "" + ''
+          substituteInPlace lix/libmain/shared.cc \
+            --replace-fail "(Lix, like Nix)" "(Lix, like Nix but for lesbians)"
+        '';
+        doInstallCheck = false;
+      });
+
+      inherit (prev.lixPackageSets.latest)
+        nixpkgs-review
+        nix-eval-jobs
+        nix-fast-build
+        colmena
+        ;
+    })
+  ];
+
   nix = {
+    # Use our customized Lix package.
+    package = pkgs.lix;
+
     # Set up Nix's garbage collector to run automatically.
     gc = {
       automatic = true;
