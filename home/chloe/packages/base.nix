@@ -5,7 +5,6 @@ with pkgs;
   # dev tools
   nodejs
   deno
-  cloudflared
   pnpm
 
   # other
