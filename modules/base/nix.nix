@@ -5,7 +5,6 @@
   # Use Lix's latest package set for Nix tools.
   nixpkgs.overlays = [
     (final: prev: {
-      # Custom Lix with lesbian pride 🏳️‍⚧️
       # Inspired by https://github.com/isabelroses/izlix
       lix = (prev.lixPackageSets.latest.lix).overrideAttrs (oa: {
         postPatch = oa.postPatch or "" + ''
