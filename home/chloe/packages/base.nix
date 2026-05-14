@@ -6,7 +6,6 @@ with pkgs;
   nodejs
   deno
   cloudflared
-  bun
   pnpm
 
   # other

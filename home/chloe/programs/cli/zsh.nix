@@ -48,7 +48,6 @@
       enable = true;
       plugins = [
         "1password"
-        "bun"
         "colored-man-pages"
         "docker"
         "docker-compose"
