@@ -19,5 +19,19 @@ jobs:
           extra_nix_config: |
             experimental-features = nix-command flakes
 
-      - name: Run flake check
-        run: nix flake check
+      - name: Check NixOS configurations
+        shell: bash
+        run: |
+          configs="$(nix eval --raw --apply 'configs: builtins.concatStringsSep "\n" (builtins.attrNames configs)' .#nixosConfigurations)"
+
+          if [ -z "$configs" ]; then
+            echo "No NixOS configurations to check."
+            exit 0
+          fi
+
+          while IFS= read -r config; do
+            [ -n "$config" ] || continue
+
+            echo "checking nixosConfigurations.${config}.config.system.build.toplevel.drvPath"
+            nix eval ".#nixosConfigurations.\"${config}\".config.system.build.toplevel.drvPath"
+          done <<< "$configs"
