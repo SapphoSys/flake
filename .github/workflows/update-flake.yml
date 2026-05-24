@@ -24,7 +24,7 @@ jobs:
 
       - name: Update flake.lock
         id: update
-        uses: DeterminateSystems/update-flake-lock@main
+        uses: DeterminateSystems/update-flake-lock@5ba4a20ae344a5edd7b97ed3002219974f4d20d7
         with:
           pr-title: "chore(flake): update inputs"
           commit-msg: "chore(flake): update inputs"
