@@ -3,8 +3,6 @@
 {
   age.secrets.bluesky-pds = {
     file = ../../secrets/bluesky-pds.age;
-    owner = "pds";
-    group = "pds";
     mode = "600";
   };
 
