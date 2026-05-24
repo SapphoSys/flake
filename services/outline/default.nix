@@ -105,6 +105,13 @@
     consoleAddress = "0.0.0.0:9001";
   };
 
+  # TODO: migrate Outline storage off MinIO. Upstream has abandoned it and
+  # nixpkgs marks it insecure, but keep the existing wiki storage alive until
+  # the data can be moved to Garage/SeaweedFS/Ceph/etc.
+  nixpkgs.config.permittedInsecurePackages = [
+    "minio-2025-10-15T17-29-55Z"
+  ];
+
   services.caddy.virtualHosts."wiki.sappho.systems" = {
     extraConfig = ''
       import common
