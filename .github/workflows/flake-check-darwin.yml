@@ -12,15 +12,12 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
-      
-      - name: Install Nix
-        uses: DeterminateSystems/nix-installer-action@main
-      
-      - name: Use Nix cache
-        uses: DeterminateSystems/magic-nix-cache-action@main
-      
+
+      - name: Install Lix
+        uses: samueldr/lix-gha-installer-action@8dc19fbd6451fa106a68ecb2dafeeeb90dff3a29
+        with:
+          extra_nix_config: |
+            experimental-features = nix-command flakes
+
       - name: Run flake check
         run: nix flake check
-      
-      - name: Check flake outputs
-        run: nix flake show
