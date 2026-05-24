@@ -1,12 +1,7 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 let
-  src = pkgs.fetchFromGitHub {
-    owner = "SapphoSys";
-    repo = "chiri.garden";
-    rev = "master";
-    hash = "sha256-xS9u2GPfxC+vuaQxIfg5tVoISUxOUwyY0vGF9MXtJXU=";
-  };
+  src = inputs."chiri-garden";
 
   chiri-garden = pkgs.stdenv.mkDerivation {
     pname = "chiri-garden";

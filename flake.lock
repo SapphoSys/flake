@@ -60,6 +60,22 @@
         "type": "github"
       }
     },
+    "chiri-garden": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1777182902,
+        "narHash": "sha256-B2AZz8XmL5ibmkWEeUBCrRsrk7eASByIZ1y1qa/uCdE=",
+        "owner": "SapphoSys",
+        "repo": "chiri.garden",
+        "rev": "2c0fa1c959d1586671e85351f63f3a5b00a35d06",
+        "type": "github"
+      },
+      "original": {
+        "owner": "SapphoSys",
+        "repo": "chiri.garden",
+        "type": "github"
+      }
+    },
     "crane": {
       "locked": {
         "lastModified": 1760924934,
@@ -607,6 +623,7 @@
     "root": {
       "inputs": {
         "catppuccin": "catppuccin",
+        "chiri-garden": "chiri-garden",
         "darwin-login-items": "darwin-login-items",
         "easy-hosts": "easy-hosts",
         "flake-parts": "flake-parts",

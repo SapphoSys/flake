@@ -38,6 +38,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    ## chiri.garden site
+    chiri-garden = {
+      url = "github:SapphoSys/chiri.garden";
+      flake = false;
+    };
+
     ## nix-darwin login items
     darwin-login-items.url = "github:uncenter/nix-darwin-login-items";
 
