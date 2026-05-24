@@ -3,22 +3,19 @@
     ./adguardhome
     ./bluesky-pds
     ./caddy
+    ./chiri-garden
     ./coturn
     ./destiny-labeler
     ./fabric-minecraft
     ./fail2ban
-    ./hl2dm
     ./glance
     ./knot
     ./lanyard
-    ./nextcloud
     ./ntfy
     ./outline
     ./pocket-id
     ./prosody
-    ./chiri-garden
     ./sapphic-moe
     ./tranquil-pds
-    ./vikunja
   ];
 }

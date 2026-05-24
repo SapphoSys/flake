@@ -6,12 +6,12 @@
 {
   # Minecraft server settings
   services.minecraft-servers = {
-    enable = true;
+    enable = false;
     eula = true;
     openFirewall = true;
 
     servers.fabric = {
-      enable = true;
+      enable = false;
 
       # Fabric server package - specify version and loader version
       package = pkgs.fabricServers.fabric-1_21_10.override {

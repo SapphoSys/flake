@@ -7,7 +7,7 @@
   };
 
   services.tranquil-pds = {
-    enable = true;
+    enable = false;
     database.createLocally = true;
 
     settings = {
