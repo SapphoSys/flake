@@ -21,8 +21,7 @@
 
         # reload system units when changing configs
         {
-          systemd.user.startServices = lib.mkIf (
-            osConfig.services.systemd-tmpfiles.enable or false || osConfig.wsl.enable or false
+          systemd.user.startServices = lib.mkIf (osConfig.services.systemd-tmpfiles.enable or false
           ) "sd-switch";
         }
       )

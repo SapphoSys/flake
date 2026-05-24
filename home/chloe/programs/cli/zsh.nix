@@ -1,7 +1,6 @@
 {
   lib,
   pkgs,
-  osConfig,
   config,
   ...
 }:
@@ -31,18 +30,11 @@
       export PRISMA_FMT_BINARY="${pkgs.prisma-engines}/bin/prisma-fmt"
     '';
 
-    shellAliases = lib.mkMerge [
-      {
-        cat = "bat";
-        cd = "z";
-        ls = "eza";
-      }
-
-      (lib.mkIf (osConfig ? wsl) {
-        ssh = "ssh.exe";
-        ssh-add = "ssh-add.exe";
-      })
-    ];
+    shellAliases = {
+      cat = "bat";
+      cd = "z";
+      ls = "eza";
+    };
 
     oh-my-zsh = {
       enable = true;

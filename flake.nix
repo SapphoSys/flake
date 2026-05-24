@@ -10,18 +10,8 @@
     easy-hosts.url = "github:tgirlcloud/easy-hosts";
 
     # Systems
-    jovian = {
-      url = "github:Jovian-Experiments/Jovian-NixOS";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nix-darwin = {
       url = "github:nix-darwin/nix-darwin";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    nixos-wsl = {
-      url = "github:nix-community/NixOS-WSL";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -71,12 +61,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    ## Logitech config tool
-    solaar = {
-      url = "github:Svenum/Solaar-Flake/main";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     ## Tangled Git platform
     tangled = {
       url = "git+https://tangled.org/tangled.org/core";
@@ -121,10 +105,6 @@
       easy-hosts = {
         path = ./hosts;
 
-        additionalClasses = {
-          wsl = "nixos";
-        };
-
         shared = {
           modules = [ ./modules/base ];
           specialArgs = { inherit inputs; };
@@ -141,34 +121,10 @@
             tags = [ "server" ];
           };
 
-          caulfield = {
-            arch = "x86_64";
-            class = "nixos";
-            tags = [ "laptop" ];
-          };
-
-          dullscythe = {
-            arch = "x86_64";
-            class = "nixos";
-            tags = [ "server" ];
-          };
-
           juniper = {
             arch = "aarch64";
             class = "darwin";
             tags = [ "laptop" ];
-          };
-
-          serenity = {
-            arch = "x86_64";
-            class = "nixos";
-            tags = [ "handheld" ];
-          };
-
-          solstice = {
-            arch = "x86_64";
-            class = "wsl";
-            tags = [ "wsl" ];
           };
         };
       };

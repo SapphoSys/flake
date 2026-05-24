@@ -14,9 +14,6 @@
       headless.enable = true;
       server.enable = true;
     };
-
-    # Enable remote builder support
-    remoteBuilder.enable = true;
   };
 
   system.stateVersion = "25.05";
