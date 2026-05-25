@@ -279,11 +279,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1779580960,
-        "narHash": "sha256-/EG2rRahtxdoKKzGPGqaymVB96kBBYhygatEAbsoqaM=",
+        "lastModified": 1779627636,
+        "narHash": "sha256-J6JGf42zNzLo/CrRdKb5dNznpLI+eGxN/5KTLG1Mo5s=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "6e92bf094d45bc33d754e2b0f75d9ca1827cc363",
+        "rev": "044c30c19550c0557997dece4ce9e54d2fa77ba1",
         "type": "github"
       },
       "original": {
@@ -341,14 +341,14 @@
     "ibm-plex-mono-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1731402384,
+        "lastModified": 1731402378,
         "narHash": "sha256-OwUmrPfEehLDz0fl2ChYLK8FQM2p0G1+EMrGsYEq+6g=",
         "type": "tarball",
-        "url": "https://github.com/IBM/plex/releases/download/@ibm%2Fplex-mono@1.1.0/ibm-plex-mono.zip"
+        "url": "https://github.com/IBM/plex/releases/download/@ibm/plex-mono@1.1.0/ibm-plex-mono.zip"
       },
       "original": {
         "type": "tarball",
-        "url": "https://github.com/IBM/plex/releases/download/@ibm%2Fplex-mono@1.1.0/ibm-plex-mono.zip"
+        "url": "https://github.com/IBM/plex/releases/download/@ibm/plex-mono@1.1.0/ibm-plex-mono.zip"
       }
     },
     "indigo": {
@@ -692,11 +692,11 @@
         "sqlite-lib-src": "sqlite-lib-src"
       },
       "locked": {
-        "lastModified": 1779539182,
-        "narHash": "sha256-Q92aozZVi+C2fj7V8BBPdG7+E/Tvy9xm4Vc+T5Y41kw=",
+        "lastModified": 1779640876,
+        "narHash": "sha256-f/pz22mNOB3a93mLzLVho9eotmtT7V+E3rcjbnhNjUY=",
         "ref": "refs/heads/master",
-        "rev": "5ee1a0425474df77f74332f94a91547bc2a15c9b",
-        "revCount": 2513,
+        "rev": "c2f17d5e005b9327b7699e1d3096a1b4581df835",
+        "revCount": 2518,
         "type": "git",
         "url": "https://tangled.org/tangled.org/core"
       },
@@ -712,11 +712,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1779566563,
-        "narHash": "sha256-iDRCDf9omPGVAmJycqkNXbXh8dqYgNS0MC3gCS55cm4=",
+        "lastModified": 1779652214,
+        "narHash": "sha256-XDx5APMfUSod9PoQNttG8t1m3PqpFp1a7yJRIcP79uE=",
         "ref": "refs/heads/main",
-        "rev": "4d2c7d47236b539f74b3225c989ebaa2c7609136",
-        "revCount": 371,
+        "rev": "86c5995568a0b7ffc7f3199ee0f14aaeaba607a3",
+        "revCount": 373,
         "type": "git",
         "url": "https://tangled.org/tranquil.farm/tranquil-pds"
       },
