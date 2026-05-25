@@ -27,7 +27,6 @@
       "figma"
       "helium-browser"
       "iina"
-      "maccy"
       "microsoft-edge"
       "microsoft-teams"
       "mos"
