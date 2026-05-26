@@ -10,9 +10,6 @@ let
     telegram-desktop
     vesktop
 
-    # dev tools
-    httpie-desktop
-
     # mail
     thunderbird
 
