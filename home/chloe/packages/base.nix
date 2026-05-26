@@ -5,7 +5,7 @@ with pkgs;
   # dev tools
   nodejs
   deno
-  pnpm
+  pnpm_10
 
   # other
   _1password-cli
