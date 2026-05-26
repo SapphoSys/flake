@@ -7,7 +7,7 @@
 let
   packages = with pkgs; [
     # fonts
-    iosevka
+    iosevka-bin
     inter
     atkinson-hyperlegible
     nerd-fonts.jetbrains-mono
