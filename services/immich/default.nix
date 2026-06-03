@@ -70,6 +70,8 @@ in
         profileSigningAlgorithm = "none";
         tokenEndpointAuthMethod = "client_secret_post";
       };
+
+      passwordLogin.enabled = false;
     };
   };
 
