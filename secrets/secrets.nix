@@ -17,6 +17,7 @@ in
   "destiny-labeler.age".publicKeys = keys;
   "ghcr-io-token.age".publicKeys = keys;
   "glance.age".publicKeys = keys;
+  "immich.age".publicKeys = keys;
   "hl2dm-rcon.age".publicKeys = keys;
   "hl2dm-server.age".publicKeys = keys;
   "lanyard.age".publicKeys = keys;

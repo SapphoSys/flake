@@ -9,6 +9,7 @@
     ./fabric-minecraft
     ./fail2ban
     ./glance
+    ./immich
     ./knot
     ./lanyard
     ./ntfy
