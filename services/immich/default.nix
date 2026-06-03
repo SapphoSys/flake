@@ -38,6 +38,13 @@ in
     group = "immich";
   };
 
+  age.secrets.immich-oauth = {
+    file = ../../secrets/immich-oauth.age;
+    mode = "440";
+    owner = "immich";
+    group = "immich";
+  };
+
   environment.systemPackages = [
     pkgs.rclone
   ];
@@ -50,6 +57,19 @@ in
 
     settings = {
       server.externalDomain = "https://images.sappho.systems";
+
+      oauth = {
+        enabled = true;
+        issuerUrl = "https://id.sappho.systems";
+        clientId = "immich";
+        clientSecret._secret = config.age.secrets.immich-oauth.path;
+        scope = "openid email profile";
+        autoRegister = true;
+        buttonText = "Sign in with Pocket ID";
+        signingAlgorithm = "RS256";
+        profileSigningAlgorithm = "none";
+        tokenEndpointAuthMethod = "client_secret_post";
+      };
     };
   };
 
