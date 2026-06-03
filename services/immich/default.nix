@@ -19,6 +19,8 @@ let
   '';
 
   startRcloneMount = pkgs.writeShellScript "immich-rclone-mount" ''
+    export PATH="/run/wrappers/bin:$PATH"
+
     exec ${pkgs.rclone}/bin/rclone mount ${rcloneRemote} ${mediaLocation} \
       --config ${rcloneConfig} \
       --cache-dir /var/cache/rclone-immich-data \
@@ -77,7 +79,7 @@ in
       AssertPathExists = rcloneConfig;
       ExecStart = startRcloneMount;
       ExecStartPost = waitForRcloneMount;
-      ExecStop = "${pkgs.fuse3}/bin/fusermount3 -u ${mediaLocation}";
+      ExecStop = "/run/wrappers/bin/fusermount3 -u ${mediaLocation}";
       Restart = "on-failure";
       RestartSec = 10;
     };
