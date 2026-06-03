@@ -12,6 +12,5 @@
     inputs.ragenix.nixosModules.default
     inputs.srcds-nix.nixosModules.default
     inputs.tangled.nixosModules.knot
-    inputs.tranquil.nixosModules.default
   ];
 }

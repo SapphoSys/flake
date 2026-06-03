@@ -279,11 +279,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1780408569,
-        "narHash": "sha256-s7Tv6FUQThRAvW8En8XVC6HMb0uiikzVccCcCo9u/Bg=",
+        "lastModified": 1780515920,
+        "narHash": "sha256-8KX2hEeOX6KP3hBBJJI8dGWVrzbOOf1rBPmg/GUG24U=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "f384af1bec6423a0d4ba1855917ab948f64e5808",
+        "rev": "4c5c1e8ba14f1c7475fa31ff11bc1c19cd220974",
         "type": "github"
       },
       "original": {
@@ -537,7 +537,6 @@
         "ragenix": "ragenix",
         "srcds-nix": "srcds-nix",
         "tangled": "tangled",
-        "tranquil": "tranquil",
         "vscode-insiders": "vscode-insiders"
       }
     },
@@ -705,26 +704,6 @@
         "url": "https://tangled.org/tangled.org/core"
       }
     },
-    "tranquil": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1780410561,
-        "narHash": "sha256-zAbLqEIKudZdor3jjdBuqluRWXfxPQ4a5vKyVBp+a30=",
-        "ref": "refs/heads/main",
-        "rev": "37fc06fb39ce28ff49007fe6a9cb1c6b93cd3b5f",
-        "revCount": 406,
-        "type": "git",
-        "url": "https://tangled.org/tranquil.farm/tranquil-pds"
-      },
-      "original": {
-        "type": "git",
-        "url": "https://tangled.org/tranquil.farm/tranquil-pds"
-      }
-    },
     "treefmt-nix": {
       "inputs": {
         "nixpkgs": [
@@ -753,11 +732,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1780437465,
-        "narHash": "sha256-NUjYS+9LtEoox03nl+f5CGl9bc3AitFqrKlX8w7Zsi0=",
+        "lastModified": 1780480065,
+        "narHash": "sha256-lYoI88HAYjIoAECHJ0+UDsSXpFK/jRSZZiIO76hZqpw=",
         "owner": "auguwu",
         "repo": "vscode-insiders-nix",
-        "rev": "9f91f58622d8c6b39838a1313f04ed9ed64a356e",
+        "rev": "8ff07b72fc2947957b980519b8e6b740dfe19be5",
         "type": "github"
       },
       "original": {
