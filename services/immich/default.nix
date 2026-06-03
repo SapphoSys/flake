@@ -61,7 +61,7 @@ in
       oauth = {
         enabled = true;
         issuerUrl = "https://id.sappho.systems";
-        clientId = "immich";
+        clientId = "6ec96572-37df-48e5-9da8-d340d8dba82a";
         clientSecret._secret = config.age.secrets.immich-oauth.path;
         scope = "openid email profile";
         autoRegister = true;
