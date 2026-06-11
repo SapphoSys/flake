@@ -17,6 +17,7 @@
     ./pocket-id
     ./prosody
     ./sapphic-moe
+    ./tclip
     ./tranquil-pds
   ];
 }

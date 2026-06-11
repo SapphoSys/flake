@@ -61,6 +61,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    ## tclip pastebin
+    tclip = {
+      url = "github:SapphoSys/tclip";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     ## Tangled Git platform
     tangled = {
       url = "git+https://tangled.org/tangled.org/core";

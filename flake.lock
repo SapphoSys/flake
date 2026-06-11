@@ -432,11 +432,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1780795403,
-        "narHash": "sha256-AkWx4Zt9pQbD/f82Z8N57+d0HGLN/rV3gdMKJTpBPKs=",
+        "lastModified": 1781160382,
+        "narHash": "sha256-rK6/8hoDWZe64npiBEIcrJ5JLv1zBnn6HBZGbVj/nDU=",
         "owner": "nix-darwin",
         "repo": "nix-darwin",
-        "rev": "6a771120d607dcccb279a27d227650e324815c35",
+        "rev": "f73cbf1f6549f1bf349398f8276801a9c1a17aa7",
         "type": "github"
       },
       "original": {
@@ -537,6 +537,7 @@
         "ragenix": "ragenix",
         "srcds-nix": "srcds-nix",
         "tangled": "tangled",
+        "tclip": "tclip",
         "vscode-insiders": "vscode-insiders"
       }
     },
@@ -672,6 +673,21 @@
         "type": "github"
       }
     },
+    "systems_5": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
     "tangled": {
       "inputs": {
         "actor-typeahead-src": "actor-typeahead-src",
@@ -691,17 +707,38 @@
         "sqlite-lib-src": "sqlite-lib-src"
       },
       "locked": {
-        "lastModified": 1781127622,
-        "narHash": "sha256-U1wYL/oy6SdN5UZA/GDp+WsT4KRlB/QeRG+szQlXx34=",
+        "lastModified": 1781166579,
+        "narHash": "sha256-1SG3McPZaW1w84vT+NQJCqR+Lonm9YW2p0AigoGvfDw=",
         "ref": "refs/heads/master",
-        "rev": "d618d077e9483e92774bd2371abddde14c24a7e2",
-        "revCount": 2620,
+        "rev": "d7f839891eac062ea33655773e5f6441150b8201",
+        "revCount": 2634,
         "type": "git",
         "url": "https://tangled.org/tangled.org/core"
       },
       "original": {
         "type": "git",
         "url": "https://tangled.org/tangled.org/core"
+      }
+    },
+    "tclip": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "utils": "utils"
+      },
+      "locked": {
+        "lastModified": 1781186063,
+        "narHash": "sha256-LqkWBr7cUewhGXW+ofL5QSJ0Ar/BV2REbSCb5JDAjKk=",
+        "owner": "SapphoSys",
+        "repo": "tclip",
+        "rev": "98eed7fbcab16ad91ef9cd54c498c56235bd2aa6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "SapphoSys",
+        "repo": "tclip",
+        "type": "github"
       }
     },
     "treefmt-nix": {
@@ -722,6 +759,24 @@
       "original": {
         "owner": "numtide",
         "repo": "treefmt-nix",
+        "type": "github"
+      }
+    },
+    "utils": {
+      "inputs": {
+        "systems": "systems_5"
+      },
+      "locked": {
+        "lastModified": 1731533236,
+        "narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "11707dc2f618dd54ca8739b309ec4fc024de578b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
         "type": "github"
       }
     },
