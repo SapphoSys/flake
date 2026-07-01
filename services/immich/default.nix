@@ -49,6 +49,8 @@ in
     pkgs.rclone
   ];
 
+  programs.fuse.enable = true;
+
   services.immich = {
     enable = true;
     host = "127.0.0.1";
@@ -97,9 +99,7 @@ in
       Type = "simple";
       User = "immich";
       Group = "immich";
-      SupplementaryGroups = [ "fuse" ];
       CacheDirectory = "rclone-immich-data";
-      DeviceAllow = [ "/dev/fuse rw" ];
       AssertPathExists = rcloneConfig;
       ExecStart = startRcloneMount;
       ExecStartPost = waitForRcloneMount;
