@@ -7,7 +7,11 @@
     onActivation = {
       autoUpdate = true;
       upgrade = true;
-      cleanup = "zap"; # Uninstall all programs not declared
+      cleanup = "uninstall";
+      extraFlags = [
+        "--zap"
+        "--force-cleanup"
+      ];
     };
 
     # Taps (third-party repositories)
@@ -22,6 +26,7 @@
     # Casks (GUI applications)
     casks = [
       "1password"
+      "chiri"
       "crossover"
       "discord"
       "figma"
