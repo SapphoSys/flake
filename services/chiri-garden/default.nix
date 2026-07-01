@@ -2,6 +2,7 @@
 
 let
   src = inputs."chiri-garden";
+  pnpm = pkgs.pnpm;
 
   chiri-garden = pkgs.stdenv.mkDerivation {
     pname = "chiri-garden";
@@ -10,7 +11,7 @@ let
 
     pnpmDeps = pkgs.fetchPnpmDeps {
       pname = "chiri-garden";
-      pnpm = pkgs.pnpm_9;
+      inherit pnpm;
       inherit src;
       fetcherVersion = 3;
       hash = "sha256-SW7jFTDztma4wcuyVB8jgtlV/BaBuJZH7MeDGxdjQog=";
@@ -18,7 +19,7 @@ let
 
     nativeBuildInputs = [
       pkgs.nodejs
-      pkgs.pnpm_9
+      pnpm
       pkgs.pnpmConfigHook
       pkgs.pkg-config
       pkgs.vips
