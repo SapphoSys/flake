@@ -98,6 +98,7 @@ in
       User = "immich";
       Group = "immich";
       CacheDirectory = "rclone-immich-data";
+      DeviceAllow = [ "/dev/fuse rw" ];
       AssertPathExists = rcloneConfig;
       ExecStart = startRcloneMount;
       ExecStartPost = waitForRcloneMount;
