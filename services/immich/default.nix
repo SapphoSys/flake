@@ -97,6 +97,7 @@ in
       Type = "simple";
       User = "immich";
       Group = "immich";
+      SupplementaryGroups = [ "fuse" ];
       CacheDirectory = "rclone-immich-data";
       DeviceAllow = [ "/dev/fuse rw" ];
       AssertPathExists = rcloneConfig;
