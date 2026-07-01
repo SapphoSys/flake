@@ -12,6 +12,7 @@
     ./immich
     ./knot
     ./lanyard
+    ./nextcloud
     ./ntfy
     ./outline
     ./pocket-id
