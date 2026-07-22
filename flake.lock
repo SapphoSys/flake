@@ -521,11 +521,11 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1784519325,
-        "narHash": "sha256-FmdN2JR8mYBuWEkGrEJEXB+IiOFBO5WKfmNlDooLfwg=",
+        "lastModified": 1784604432,
+        "narHash": "sha256-csCj+e+wQOohlErOgy+8wcNJsvPmSDMbytbJeB+nbC4=",
         "owner": "Infinidoge",
         "repo": "nix-minecraft",
-        "rev": "b73dfa305befd2e932371647e8060f307b9f8706",
+        "rev": "ff96c92bb6f953d45d95ce92d8865b1ddb025df6",
         "type": "github"
       },
       "original": {
@@ -771,6 +771,19 @@
         "type": "github"
       }
     },
+    "tailwindcss-animated-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 499162500,
+        "narHash": "sha256-l3esIcsAwj0PHOhnHBLWiLzzRiOo1yOk9VYEGpn6fyQ=",
+        "type": "tarball",
+        "url": "https://registry.npmjs.org/tailwindcss-animated/-/tailwindcss-animated-1.1.2.tgz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://registry.npmjs.org/tailwindcss-animated/-/tailwindcss-animated-1.1.2.tgz"
+      }
+    },
     "tangled": {
       "inputs": {
         "actor-typeahead-src": "actor-typeahead-src",
@@ -791,14 +804,15 @@
         "nixpkgs": [
           "nixpkgs"
         ],
-        "sqlite-lib-src": "sqlite-lib-src"
+        "sqlite-lib-src": "sqlite-lib-src",
+        "tailwindcss-animated-src": "tailwindcss-animated-src"
       },
       "locked": {
-        "lastModified": 1784577008,
-        "narHash": "sha256-7kefP1TO4T+ZjVUNc24+eYtT5crEWtZ1qIrQgZ7XN+I=",
+        "lastModified": 1784649639,
+        "narHash": "sha256-A9aUUoZkkEi5GV0CsgC8yjaxl+XdZoD4+ixB+tCXGxw=",
         "ref": "refs/heads/master",
-        "rev": "6d78fffa9e429ff5a693fb0c275cd5cc2f84755d",
-        "revCount": 2942,
+        "rev": "ce9570e7dd90fc860be88c4c28aa8aa081a006f3",
+        "revCount": 2958,
         "type": "git",
         "url": "https://tangled.org/tangled.org/core"
       },
@@ -874,11 +888,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1784538828,
-        "narHash": "sha256-USZHPbO0c77uzTIGrY73553jdpZ0hQ4rynbLWJJdCLg=",
+        "lastModified": 1784624573,
+        "narHash": "sha256-TQRgvv5EMbK9VccslIcHLviXkBkHMzPL6WLorw3i1XU=",
         "owner": "auguwu",
         "repo": "vscode-insiders-nix",
-        "rev": "f1ceaff47bb56420dcf928567d11aecfa2041d01",
+        "rev": "224cc92fbab179dd55f86892f4a67306e274a897",
         "type": "github"
       },
       "original": {
