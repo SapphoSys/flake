@@ -312,11 +312,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1784725727,
-        "narHash": "sha256-J5+C9wsO0lhDyUalQzfplDbRjyHDYeEH5+9sdyXtwa8=",
+        "lastModified": 1784789275,
+        "narHash": "sha256-cgRTWuG+u1tBPhm01JrId2k0Bni09phVJ1Q0BZlRd7M=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "041a999e8c1c5b731913855909e68d30ca69b8e0",
+        "rev": "3b0e6bbd65869af1beadf5963a99befc179d209f",
         "type": "github"
       },
       "original": {
@@ -479,11 +479,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1765326831,
-        "narHash": "sha256-18j8X2Nbe0Wg1+7YrWRlYzmjZ5Wq0NCVwJHJlBIw/dc=",
+        "lastModified": 1784783032,
+        "narHash": "sha256-upJVI2pq9sOKgF2AILt8l6O4/3GNcMtT/s0rmnbO5UA=",
         "owner": "oxalica",
         "repo": "nil",
-        "rev": "504599f7e555a249d6754698473124018b80d121",
+        "rev": "dbbb5c24f9215476992aa1bd305f8e5398e89654",
         "type": "github"
       },
       "original": {
@@ -521,11 +521,11 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1784690860,
-        "narHash": "sha256-S0Y47eNLJ7lALoZG+UyZPwYeCE5NKKDJvNLOoSthYhQ=",
+        "lastModified": 1784777515,
+        "narHash": "sha256-hBzD1XzM/2cYWfgLvbiGDLDebE1SXHO+O6N4YOT0+W4=",
         "owner": "Infinidoge",
         "repo": "nix-minecraft",
-        "rev": "1a27d0ced3ba850505766464b8ccfcc069ec3338",
+        "rev": "3fc7a8a5d4640a5e6bf614e17e5c4c971edfc90a",
         "type": "github"
       },
       "original": {
@@ -808,11 +808,11 @@
         "tailwindcss-animated-src": "tailwindcss-animated-src"
       },
       "locked": {
-        "lastModified": 1784754477,
-        "narHash": "sha256-MbFQs12mct1LGBrz3VzLWWuGnif4B9D8FVMZUx4Eowg=",
+        "lastModified": 1784828651,
+        "narHash": "sha256-1NKcGOQ+NBuSWRpARmtzjoZDimyXohhSEUuP9cOVXgk=",
         "ref": "refs/heads/master",
-        "rev": "de0f127cd74a5931c377aa2a84c59d6ec9daeda6",
-        "revCount": 2987,
+        "rev": "50574018db292b9df22c4f9591f0e66458480909",
+        "revCount": 2997,
         "type": "git",
         "url": "https://tangled.org/tangled.org/core"
       },
@@ -888,11 +888,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1784710948,
-        "narHash": "sha256-utTb4ffUKkeXxnUCy34cILvsXgafGaDWaGQ27CoB/js=",
+        "lastModified": 1784797331,
+        "narHash": "sha256-EPPfTygsf2Ti+/IYNf+xZOVWXpU7Vem9j+WBAY6OeoE=",
         "owner": "auguwu",
         "repo": "vscode-insiders-nix",
-        "rev": "5ebdba10b0ce8e3b30a097a40f4bf5e505e215d2",
+        "rev": "46ffcf66637caed5e3cfd0965d88094f436950dd",
         "type": "github"
       },
       "original": {
