@@ -499,11 +499,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1784500460,
-        "narHash": "sha256-UvORnAxTRHax7RG74W8Z2t4GvIkX6AjJ5kk0QlwZomo=",
+        "lastModified": 1785389976,
+        "narHash": "sha256-0tLW8Ff5yt8AH97jw4ZpFJ0OCJ122zIlgWGDmOfU/VU=",
         "owner": "nix-darwin",
         "repo": "nix-darwin",
-        "rev": "57a3171f94705599a2499248ca5758d5eb47c0e0",
+        "rev": "15abb8c98f336cd8bd840d71059adebabe60bf04",
         "type": "github"
       },
       "original": {
@@ -521,11 +521,11 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1785295223,
-        "narHash": "sha256-Y1dvDpIksaDhve6JVHJqDj3uk3WtTkWeJQMu2F1Jc/A=",
+        "lastModified": 1785380030,
+        "narHash": "sha256-p4CNiFOumG+7/BY/F+neB356s3yVsD1U3gSTstlh4Cc=",
         "owner": "Infinidoge",
         "repo": "nix-minecraft",
-        "rev": "2aa7b3c07aac2ad1a71518ae37cec473ba89b68f",
+        "rev": "6e3fb26a6462aca2252ed36919f7bbe7cdae19cf",
         "type": "github"
       },
       "original": {
@@ -808,11 +808,11 @@
         "tailwindcss-animated-src": "tailwindcss-animated-src"
       },
       "locked": {
-        "lastModified": 1785346475,
-        "narHash": "sha256-RZr7YBVPVulCFGF/Ht74UB0EMut7MGt1EQ1BQ6/xbjM=",
+        "lastModified": 1785451697,
+        "narHash": "sha256-3sygQR3n53fET9rPu13GVqOHJO+VxCq+NK3vThwgBMk=",
         "ref": "refs/heads/master",
-        "rev": "0dc54771380cd1bfec25d775fedfb66db7869b74",
-        "revCount": 3050,
+        "rev": "0f12c494c289fcbd613d5b581a2b748dfbdcfa6f",
+        "revCount": 3064,
         "type": "git",
         "url": "https://tangled.org/tangled.org/core"
       },
@@ -888,11 +888,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1785315878,
-        "narHash": "sha256-KpY756QuuzrTBHJ8QraXbVSOMP2DrafbzBaN0wec/JY=",
+        "lastModified": 1785402173,
+        "narHash": "sha256-Eb5VQlfPDce+UuJ+tLTr25j3h4eA8QUGMKxtY2R0qJk=",
         "owner": "auguwu",
         "repo": "vscode-insiders-nix",
-        "rev": "8302dd23bf617ee686afe49c06fee42d9877a073",
+        "rev": "d8808a33e3f82c6522bf29798ade12117c2b76b2",
         "type": "github"
       },
       "original": {
