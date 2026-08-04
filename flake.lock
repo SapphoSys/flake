@@ -521,11 +521,11 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1785641775,
-        "narHash": "sha256-uAC6AYnsv3+MvSQgYQ8p5c3PLTHV+MpmyF5TF2CFcAM=",
+        "lastModified": 1785728294,
+        "narHash": "sha256-NVjWahSbNC/G2EY6oX4LfKBzcDajVpgh+xJR8PUjmlg=",
         "owner": "Infinidoge",
         "repo": "nix-minecraft",
-        "rev": "c9fb83c1eb6b232c2368245378e40ba2cde1f152",
+        "rev": "06ca981f5d463e4448bdc32677c993a83122e6f1",
         "type": "github"
       },
       "original": {
@@ -536,11 +536,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1785571196,
-        "narHash": "sha256-KoTsyMQqnXQZq8deCEnu4QkyldkwH/bpMMhUcfMdGIw=",
+        "lastModified": 1785692966,
+        "narHash": "sha256-vUfIeBEfpbAfZ5zjgIkYk7eHBeVfCYVjLbWnMkseYnk=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
+        "rev": "643809054d65fdd466a63e3155b8c498cb483c04",
         "type": "github"
       },
       "original": {
@@ -808,11 +808,11 @@
         "tailwindcss-animated-src": "tailwindcss-animated-src"
       },
       "locked": {
-        "lastModified": 1785617335,
-        "narHash": "sha256-LEt3wqCFHt8rvi67d1roIHkbDvIKaXOynB6AxDowJ3c=",
+        "lastModified": 1785789514,
+        "narHash": "sha256-oWfwnhQ2KhVzM/7dBYVV3UL/Yn89A3qqrzrLSPcIeWw=",
         "ref": "refs/heads/master",
-        "rev": "25d3c23eacc81ec27e50ace3eaf608aa13e5d89f",
-        "revCount": 3075,
+        "rev": "29c4aaa3f1cf5f4ae98103918d7e9db320ec4043",
+        "revCount": 3083,
         "type": "git",
         "url": "https://tangled.org/tangled.org/core"
       },
