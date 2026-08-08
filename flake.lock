@@ -47,11 +47,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1785485193,
-        "narHash": "sha256-JgUmb34d3Zv1W5fYukqEUEDHSaWhw7WV9HVUXOmOCaA=",
+        "lastModified": 1786088497,
+        "narHash": "sha256-lUkfsIy1inAB7dxARG2i3seNDHkSmRejEhhH2NYXDJ4=",
         "owner": "catppuccin",
         "repo": "nix",
-        "rev": "41c4ebf8cb3e4052001947a457b4ac093e5dc119",
+        "rev": "9e5cacc4e3a2d01c828fc4b29e88fb577241d70f",
         "type": "github"
       },
       "original": {
@@ -521,11 +521,11 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1785986405,
-        "narHash": "sha256-UOFmsCE2qVcfbki5n+hVOXf1vKMZoaAbZsuBB7a2Log=",
+        "lastModified": 1786072111,
+        "narHash": "sha256-m6NWUbZC08A/bHjR0sy7Ee1/xjnqGxQzLcHHLzVMPYY=",
         "owner": "Infinidoge",
         "repo": "nix-minecraft",
-        "rev": "a28972426b5487f0e936bb0275ab48139753bc4c",
+        "rev": "02f9da181da65a0f2f869b8a1ea8cd263fbd1d31",
         "type": "github"
       },
       "original": {
@@ -808,11 +808,11 @@
         "tailwindcss-animated-src": "tailwindcss-animated-src"
       },
       "locked": {
-        "lastModified": 1786007269,
-        "narHash": "sha256-qyiznPAvQXmAuR7Dmctbx9oFdz5zhQEubCpptyw3dyc=",
+        "lastModified": 1786139879,
+        "narHash": "sha256-oYlJNYs9Jeo81eaMexSwwVvJutsGyeKwWlGtItnm/gI=",
         "ref": "refs/heads/master",
-        "rev": "bc73af0594d43e3718142b072b3c6f6e815bed81",
-        "revCount": 3093,
+        "rev": "72600e09bab5acdfb3252394870ed8f04f372c7d",
+        "revCount": 3094,
         "type": "git",
         "url": "https://tangled.org/tangled.org/core"
       },
@@ -888,11 +888,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1786007074,
-        "narHash": "sha256-OKJEHYieoKK/twkSAcumK3Wy2qNeGuS252PIIGpivOc=",
+        "lastModified": 1786091519,
+        "narHash": "sha256-yrY0OePNG6+maAx1XOPstAQkLVRPHgRUiR0dsWcWhM4=",
         "owner": "auguwu",
         "repo": "vscode-insiders-nix",
-        "rev": "8f683c4a449f4f108d509eea35904a132e3b3e6c",
+        "rev": "d0384678c59fb0073038ed618535d6890328f700",
         "type": "github"
       },
       "original": {
