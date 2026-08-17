@@ -13,8 +13,8 @@ let
       pname = "chiri-garden";
       inherit pnpm;
       inherit src;
-      fetcherVersion = 3;
-      hash = "sha256-KVXHUwcN8HQK0cpG2XUz8Ktgf/t2gmR1pVBGd7Fls+4=";
+      fetcherVersion = 4;
+      hash = "";
     };
 
     nativeBuildInputs = [
