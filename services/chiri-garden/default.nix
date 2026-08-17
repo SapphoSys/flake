@@ -14,7 +14,7 @@ let
       inherit pnpm;
       inherit src;
       fetcherVersion = 4;
-      hash = "";
+      hash = "sha256-Ij20VZL12qmuju+44OjHRNdlltRdpFVPE659ZYzpIr0=";
     };
 
     nativeBuildInputs = [
