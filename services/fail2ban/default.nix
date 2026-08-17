@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   age.secrets.abuseipdb = {
@@ -7,7 +7,7 @@
   };
 
   services.fail2ban = {
-    enable = true;
+    enable = config.settings.ssh.enable;
 
     # Include curl for making HTTP requests to AbuseIPDB
     extraPackages = [ pkgs.curl ];
