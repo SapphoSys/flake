@@ -10,6 +10,8 @@
       device = "/dev/sda";
     };
 
+    tailscale.advertiseConnector = true;
+
     profiles = {
       headless.enable = true;
       server.enable = true;

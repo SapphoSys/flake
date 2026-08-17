@@ -14,7 +14,15 @@
       defaultFlags = lib.mkOption {
         type = lib.types.listOf lib.types.str;
         default = [ "--ssh" ];
-        description = "A list of command-line flags that will be passed to the Tailscale daemon";
+        description = "A list of command-line flags that will be passed to `tailscale set`";
+      };
+
+      advertiseConnector = lib.mkEnableOption "advertise this node as a Tailscale app connector";
+
+      advertiseExitNode = lib.mkOption {
+        type = lib.types.bool;
+        default = config.settings.tailscale.isServer;
+        description = "Whether this Tailscale instance advertises itself as an exit node";
       };
 
       isServer = lib.mkOption {
@@ -42,10 +50,11 @@
     services.tailscale = {
       enable = true;
       permitCertUid = "root";
-      useRoutingFeatures = lib.mkDefault "server";
-      extraUpFlags =
+      useRoutingFeatures = if config.settings.tailscale.isServer then "server" else "client";
+      extraSetFlags =
         config.settings.tailscale.defaultFlags
-        ++ lib.optionals config.settings.tailscale.isServer [ "--advertise-exit-node" ];
+        ++ lib.optionals config.settings.tailscale.advertiseExitNode [ "--advertise-exit-node" ]
+        ++ lib.optionals config.settings.tailscale.advertiseConnector [ "--advertise-connector" ];
     };
 
     # A server cannot be a client and vice versa
@@ -53,6 +62,14 @@
       {
         assertion = config.settings.tailscale.isClient != config.settings.tailscale.isServer;
         message = "Tailscale instance cannot be both a client and a server at the same time.";
+      }
+      {
+        assertion = !config.settings.tailscale.advertiseConnector || config.settings.tailscale.isServer;
+        message = "A Tailscale app connector must be configured as a server node.";
+      }
+      {
+        assertion = !config.settings.tailscale.advertiseExitNode || config.settings.tailscale.isServer;
+        message = "A Tailscale exit node must be configured as a server node.";
       }
     ];
   };
