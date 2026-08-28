@@ -521,11 +521,11 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1787708793,
-        "narHash": "sha256-Ovp8JorHAQbFNgenK0jTUnUU4tB7R9rS5Uao/L/dkg0=",
+        "lastModified": 1787820617,
+        "narHash": "sha256-XZ/fZ4a5OE5vt0ycd027xoeSoXh7ljAQ284f+oYtW1U=",
         "owner": "Infinidoge",
         "repo": "nix-minecraft",
-        "rev": "e81f8786718bd697348f66ef7023d1ddc4e5a0b6",
+        "rev": "7ba208453e42f6dbbd8e80a9ef86bea2ba6745a6",
         "type": "github"
       },
       "original": {
@@ -536,11 +536,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1787498568,
-        "narHash": "sha256-9i/VTdusq/+NM/tz+J1Re+ojkMB8MBf0QshnYfzHz30=",
+        "lastModified": 1787736819,
+        "narHash": "sha256-cV5xEJJK3BvhU8rEd4mC9UsmDi5qscv/kzGPhBRC5WA=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "56c02bc00adcf003215cc4bd996d6efaf4cff188",
+        "rev": "9fbb54b33e91ee4ca368e35a78e0613c720600b3",
         "type": "github"
       },
       "original": {
@@ -808,11 +808,11 @@
         "tailwindcss-animated-src": "tailwindcss-animated-src"
       },
       "locked": {
-        "lastModified": 1787736473,
-        "narHash": "sha256-uOfhUvP893PrhsGXVjoM75p+xD75xvERIdv5IBwl0S0=",
+        "lastModified": 1787901969,
+        "narHash": "sha256-2g6/p3YULmbzNMWrkq5pZrXv0xhztIgwxwNVJK/vRAQ=",
         "ref": "refs/heads/master",
-        "rev": "957c0e15fd47694683e7e03c24cdcb7240318225",
-        "revCount": 3149,
+        "rev": "376c27222bf67e44632063b753091a624542c163",
+        "revCount": 3168,
         "type": "git",
         "url": "https://tangled.org/tangled.org/core"
       },
@@ -888,11 +888,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1787732439,
-        "narHash": "sha256-7D+WRQM9N8MXKrjCBU4RDbQOaJUB4bykH6upjhkqm0o=",
+        "lastModified": 1787830392,
+        "narHash": "sha256-af0LxrSucv6yQw2GGTkIpdcVV+tdu9SsJyL53U1YUqk=",
         "owner": "auguwu",
         "repo": "vscode-insiders-nix",
-        "rev": "c1cdc96b0e1994608dbb78430a87ebfcc7b18c47",
+        "rev": "b14a08a08f8daf4f8ad11bbf9790eeea4d44cd7b",
         "type": "github"
       },
       "original": {
