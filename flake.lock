@@ -521,11 +521,11 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1790745166,
-        "narHash": "sha256-5xu1JcJVsmVx2ArcOlJQdHEaetHQ4N2MPcXy4+5X3M0=",
+        "lastModified": 1791003502,
+        "narHash": "sha256-3XyjQy3s0BYua+/27AzAP2MpMtOekEGnQ7HND5onivY=",
         "owner": "Infinidoge",
         "repo": "nix-minecraft",
-        "rev": "c18255b31425a0e4529a65b25b3cc1ac40241c32",
+        "rev": "15f02916e989d84c2f98decea633088172cba435",
         "type": "github"
       },
       "original": {
@@ -888,11 +888,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1790756707,
-        "narHash": "sha256-YNxv9gguedt6K8LNPFgSDWN8gEc4DTKHqgW0CXhqC1g=",
+        "lastModified": 1791015749,
+        "narHash": "sha256-IREJKTHmPghoZaiDWa80VK6D/FlBnRvvvPkGDx3fIOA=",
         "owner": "auguwu",
         "repo": "vscode-insiders-nix",
-        "rev": "ac992c049edcd2216fb6ad767e2da18a340ace90",
+        "rev": "011a7c197ed4dec674f51fc966dc167442833086",
         "type": "github"
       },
       "original": {
