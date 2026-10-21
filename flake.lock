@@ -312,11 +312,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792495086,
-        "narHash": "sha256-TyoYH983Nsc++1scw0SoOEKshPSJWJDxK7tTmuZ974M=",
+        "lastModified": 1792602378,
+        "narHash": "sha256-PUWsQrjH2rUHil737m/rf/r9EZWbUNYDGiOB7QBGgVc=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "ec80131710bffcdf3b8498cf41f3a0579833b023",
+        "rev": "ca80564f215ee70c4bd0f11d7ca6451c0c8fa9b4",
         "type": "github"
       },
       "original": {
@@ -521,11 +521,11 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1792470566,
-        "narHash": "sha256-Kid2NVRchBvgQ2uNQ+Jk1fOIkAkFpmAANivhJh1yTu8=",
+        "lastModified": 1792556406,
+        "narHash": "sha256-DSRDShv41SWpRsyP5SqmIgGAp2Z3AVREZxEwqdcnXj8=",
         "owner": "Infinidoge",
         "repo": "nix-minecraft",
-        "rev": "0583a7a828d7964323edcce9c60b0d7a4b138b2c",
+        "rev": "27f79badc34d8df808bc617db8f0de208ecd375f",
         "type": "github"
       },
       "original": {
@@ -808,11 +808,11 @@
         "tailwindcss-animated-src": "tailwindcss-animated-src"
       },
       "locked": {
-        "lastModified": 1792352840,
-        "narHash": "sha256-pehXSw17JRgWA/d4t/x9ZcdxOHJaY3I0+H+3p1hVZxk=",
+        "lastModified": 1792561894,
+        "narHash": "sha256-Pu6e390+jD9olkxZGYDjto6t+juUjfwcxx2zFYyq8f4=",
         "ref": "refs/heads/master",
-        "rev": "dad751949f865d6189f7602e1409c5f951e75771",
-        "revCount": 3260,
+        "rev": "12ebb0c96f615a31991c20a144bf08b146bfcabd",
+        "revCount": 3264,
         "type": "git",
         "url": "https://tangled.org/tangled.org/core"
       },
@@ -888,11 +888,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792484535,
-        "narHash": "sha256-lF6fsV0VS0ZupjJQ9Pd53UDSxyUPdFsOfyb5EdkDgEk=",
+        "lastModified": 1792570945,
+        "narHash": "sha256-nthOdfIOi5EsByZla6HZqLBqNjVXj16L/VNVsXAE2Dw=",
         "owner": "auguwu",
         "repo": "vscode-insiders-nix",
-        "rev": "29c8e18a64e8c53f8f3f582f9272406b50a14a96",
+        "rev": "f482c0f8f5aba995b591216f80a2765a43598e2d",
         "type": "github"
       },
       "original": {
