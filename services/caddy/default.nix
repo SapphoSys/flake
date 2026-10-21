@@ -12,7 +12,7 @@
       plugins = [
         "github.com/caddy-dns/bunny@v1.2.0"
       ];
-      hash = "sha256-Xrd6CKN7xxStJ1Rm5Uh4daRjUfz1Slu8FUnr4MmaDMA=";
+      hash = "sha256-/4zNC5EecG2vHRCL5Y7fcBnrn8+ccXYDQGn2RHSTvbU=";
     };
     environmentFile = config.age.secrets.caddy.path;
     globalConfig = ''
