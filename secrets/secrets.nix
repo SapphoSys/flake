@@ -26,6 +26,7 @@ in
   "nextcloud.age".publicKeys = keys;
   "ntfy.age".publicKeys = keys;
   "outline/client-secret.age".publicKeys = keys;
+  "outline/b2-application-key.age".publicKeys = keys;
   "outline/minio-password.age".publicKeys = keys;
   "outline/secret-key.age".publicKeys = keys;
   "outline/smtp-password.age".publicKeys = keys;

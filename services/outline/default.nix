@@ -2,21 +2,14 @@
 
 {
   age.secrets = {
-    minioCredentials = {
-      file = ../../secrets/minio.age;
-      mode = "600";
-      owner = "minio";
-      group = "minio";
-    };
-
     outlineClientSecret = {
       file = ../../secrets/outline/client-secret.age;
       mode = "600";
       owner = "outline";
       group = "outline";
     };
-    outlineMinioSecret = {
-      file = ../../secrets/outline/minio-password.age;
+    outlineB2Secret = {
+      file = ../../secrets/outline/b2-application-key.age;
       mode = "600";
       owner = "outline";
       group = "outline";
@@ -57,11 +50,11 @@
 
     storage = {
       storageType = "s3";
-      accessKey = "minio";
-      secretKeyFile = config.age.secrets.outlineMinioSecret.path;
-      uploadBucketUrl = "https://minio.sappho.systems";
-      uploadBucketName = "outline";
-      region = "us-east-1";
+      accessKey = "0025958249af2220000000019";
+      secretKeyFile = config.age.secrets.outlineB2Secret.path;
+      uploadBucketName = "sapphic-outline";
+      uploadBucketUrl = "https://s3.us-west-002.backblazeb2.com";
+      region = "us-west-002";
       uploadMaxSize = 104857600;
       forcePathStyle = true;
       acl = "private";
@@ -97,34 +90,15 @@
     };
   };
 
-  services.minio = {
-    enable = true;
-    rootCredentialsFile = config.age.secrets.minioCredentials.path;
-    dataDir = [ "/var/lib/minio" ];
-    listenAddress = "0.0.0.0:9000";
-    consoleAddress = "0.0.0.0:9001";
-  };
-
-  # TODO: migrate Outline storage off MinIO. Upstream has abandoned it and
-  # nixpkgs marks it insecure, but keep the existing wiki storage alive until
-  # the data can be moved to Garage/SeaweedFS/Ceph/etc.
-  nixpkgs.config.permittedInsecurePackages = [
-    "minio-2025-10-15T17-29-55Z"
-  ];
+  # Backblaze B2's S3 API supports presigned PUT uploads, which Outline can
+  # use instead of the presigned POST flow
+  systemd.services.outline.environment.AWS_S3_UPLOAD_METHOD = "put";
 
   services.caddy.virtualHosts."wiki.sappho.systems" = {
     extraConfig = ''
       import common
       import tls_bunny
       reverse_proxy http://localhost:3300
-    '';
-  };
-
-  services.caddy.virtualHosts."minio.sappho.systems" = {
-    extraConfig = ''
-      import common
-      import tls_bunny
-      reverse_proxy http://localhost:9000
     '';
   };
 }
