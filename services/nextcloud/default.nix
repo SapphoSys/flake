@@ -7,7 +7,7 @@
   };
 
   services.nextcloud = {
-    enable = true;
+    enable = false;
     hostName = "nc.sappho.systems";
     https = true;
     package = pkgs.nextcloud33;
