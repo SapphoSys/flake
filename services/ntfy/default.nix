@@ -8,8 +8,6 @@
 
   services.ntfy-sh = {
     enable = true;
-    user = "ntfy";
-    group = "ntfy";
 
     settings = {
       base-url = "https://notify.sappho.systems";
