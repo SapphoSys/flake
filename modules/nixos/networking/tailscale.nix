@@ -13,7 +13,10 @@
 
       defaultFlags = lib.mkOption {
         type = lib.types.listOf lib.types.str;
-        default = [ "--ssh" ];
+        default = [
+          "--ssh=false"
+          # "--ssh"
+        ];
         description = "A list of command-line flags that will be passed to `tailscale set`";
       };
 

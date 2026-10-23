@@ -16,7 +16,7 @@
     };
 
     # try out tailscale ssh
-    ssh.enable = false;
+    # ssh.enable = false;
     tailscale.advertiseConnector = true;
   };
 
