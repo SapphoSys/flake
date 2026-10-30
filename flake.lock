@@ -371,6 +371,38 @@
         "url": "https://cdn.jsdelivr.net/npm/htmx-ext-ws@2.0.4"
       }
     },
+    "hydrant": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1792544679,
+        "narHash": "sha256-fm0cuIyHjJTSvleJyLbT4E5KugtanuysL/oMOnGhN3I=",
+        "ref": "refs/heads/main",
+        "rev": "0128352f6b73d26e7ffaa5a79446ef556e452617",
+        "revCount": 811,
+        "type": "git",
+        "url": "https://tangled.org/ptr.pet/hydrant"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://tangled.org/ptr.pet/hydrant"
+      }
+    },
+    "hydrant-dev": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1792544679,
+        "narHash": "sha256-fm0cuIyHjJTSvleJyLbT4E5KugtanuysL/oMOnGhN3I=",
+        "ref": "refs/heads/main",
+        "rev": "0128352f6b73d26e7ffaa5a79446ef556e452617",
+        "revCount": 811,
+        "type": "git",
+        "url": "https://tangled.org/ptr.pet/hydrant"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://tangled.org/ptr.pet/hydrant"
+      }
+    },
     "ibm-plex-mono-src": {
       "flake": false,
       "locked": {
@@ -521,11 +553,11 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1793164573,
-        "narHash": "sha256-jni6QBIbB61maDocxJp7lKCGP/lELLYbw67uuRfSvAg=",
+        "lastModified": 1793251513,
+        "narHash": "sha256-KdEa1gSXEE06b89yQvSXiM7kG0/UZNjlj1VZ5pUFnl4=",
         "owner": "Infinidoge",
         "repo": "nix-minecraft",
-        "rev": "525998e1af91e0cde40987e5a5889d623384f103",
+        "rev": "3091f29032046907077769f48f3dd92f88ac13dd",
         "type": "github"
       },
       "original": {
@@ -562,6 +594,22 @@
       "original": {
         "owner": "nix-community",
         "repo": "nixpkgs.lib",
+        "type": "github"
+      }
+    },
+    "nixpkgs-pds": {
+      "locked": {
+        "lastModified": 1791734076,
+        "narHash": "sha256-i5qk1kLiit98rRbh1AXmWBNT9QXC/y4l5Wk/u5EdpDQ=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "7fd4004d0511991fff3a0524856a9be09e28c5f0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
         "type": "github"
       }
     },
@@ -794,6 +842,8 @@
         "hls-src": "hls-src",
         "htmx-src": "htmx-src",
         "htmx-ws-src": "htmx-ws-src",
+        "hydrant": "hydrant",
+        "hydrant-dev": "hydrant-dev",
         "ibm-plex-mono-src": "ibm-plex-mono-src",
         "indigo": "indigo",
         "inter-fonts-src": "inter-fonts-src",
@@ -804,15 +854,17 @@
         "nixpkgs": [
           "nixpkgs"
         ],
+        "nixpkgs-pds": "nixpkgs-pds",
         "sqlite-lib-src": "sqlite-lib-src",
-        "tailwindcss-animated-src": "tailwindcss-animated-src"
+        "tailwindcss-animated-src": "tailwindcss-animated-src",
+        "timeless-fonts-src": "timeless-fonts-src"
       },
       "locked": {
-        "lastModified": 1792561894,
-        "narHash": "sha256-Pu6e390+jD9olkxZGYDjto6t+juUjfwcxx2zFYyq8f4=",
+        "lastModified": 1793322901,
+        "narHash": "sha256-ls623ueJwU4y9PCarSpvZ4DxkBPcOBelpu1rCulUd9c=",
         "ref": "refs/heads/master",
-        "rev": "12ebb0c96f615a31991c20a144bf08b146bfcabd",
-        "revCount": 3264,
+        "rev": "db269aa5886dbc98c42010fd9d15f5e60a341f65",
+        "revCount": 6019,
         "type": "git",
         "url": "https://tangled.org/tangled.org/core"
       },
@@ -840,6 +892,19 @@
         "owner": "SapphoSys",
         "repo": "tclip",
         "type": "github"
+      }
+    },
+    "timeless-fonts-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1791052084,
+        "narHash": "sha256-zYpoDkE/YrICzYaHF4/NSuINczFWB41YymTxaL6KqLY=",
+        "type": "tarball",
+        "url": "https://media.timeless.co/type/Timeless-Type-Family-1.094.zip"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://media.timeless.co/type/Timeless-Type-Family-1.094.zip"
       }
     },
     "treefmt-nix": {
