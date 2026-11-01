@@ -429,11 +429,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793415821,
-        "narHash": "sha256-LAka2Uxev0iZvz3C+vr5E3hesJFfHZOyAi5qPW+4090=",
+        "lastModified": 1793418699,
+        "narHash": "sha256-+RpTlcdh9KqZ+ZiLkNSTvibQWm935EcIdBzRPCTFsrQ=",
         "owner": "nix-darwin",
         "repo": "nix-darwin",
-        "rev": "9176e50bb87d55f509c66a7ce164d7f74452ed79",
+        "rev": "ff0e21a414d4547183396da1b44a66f2577b65e9",
         "type": "github"
       },
       "original": {
@@ -451,11 +451,11 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1793337890,
-        "narHash": "sha256-yg7ZakPsZOsx1RPNslOSHoHyqPVudzm0OdmxhLs7+OE=",
+        "lastModified": 1793423372,
+        "narHash": "sha256-2KycYby9DrXo3W3kUaqfKRxN0GKhuNTSM1u/VW+GaVA=",
         "owner": "Infinidoge",
         "repo": "nix-minecraft",
-        "rev": "f71d4e9de99e640898e6fe9c61cfd11ee0420697",
+        "rev": "dbdac5f0805ef57bc3d1978288114a796f8d98ea",
         "type": "github"
       },
       "original": {
@@ -736,11 +736,11 @@
         "timeless-fonts-src": "timeless-fonts-src"
       },
       "locked": {
-        "lastModified": 1793404343,
-        "narHash": "sha256-8qpesGgXXzWhf9+1SA4rlz85nJsrvgSkTV6OsNnGY0A=",
+        "lastModified": 1793496816,
+        "narHash": "sha256-pPGr18ndfJLMNUqklL63YehuLB7WRBKEFODCiU5PBKM=",
         "ref": "refs/heads/master",
-        "rev": "05ee844212c783cc4c724028cdbf82204c56a057",
-        "revCount": 6045,
+        "rev": "8f6a2334ec2c0585e03eae247ed9cdc52258b2fc",
+        "revCount": 6120,
         "type": "git",
         "url": "https://tangled.org/tangled.org/core"
       },
